@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FIXML xsi:schemaLocation="http://www.finacle.com/fixml RetCustInq.xsd" xmlns="http://www.finacle.com/fixml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <Header>
+        <RequestHeader>
+            <MessageKey>
+                <RequestUUID>UNIQUE_REQ_ID</RequestUUID>
+                <ServiceRequestId>RetCustInq</ServiceRequestId>
+                <ServiceRequestVersion>10.2</ServiceRequestVersion>
+                <ChannelId>CRM</ChannelId>
+                <LanguageId></LanguageId>
+            </MessageKey>
+            <RequestMessageInfo>
+                <BankId>01</BankId>
+                <TimeZone></TimeZone>
+                <EntityId></EntityId>
+                <EntityType></EntityType>
+                <ArmCorrelationId></ArmCorrelationId>
+                <MessageDateTime>2019-06-24T17:39:57.622</MessageDateTime>
+            </RequestMessageInfo>
+            <Security>
+                <Token>
+                    <PasswordToken>
+                        <UserId></UserId>
+                        <Password></Password>
+                    </PasswordToken>
+                </Token>
+                <FICertToken></FICertToken>
+                <RealUserLoginSessionId></RealUserLoginSessionId>
+                <RealUser></RealUser>
+                <RealUserPwd></RealUserPwd>
+                <SSOTransferToken></SSOTransferToken>
+            </Security>
+        </RequestHeader>
+    </Header>
+    <Body>
+        <RetCustInqRequest>
+            <RetCustInqRq>
+                <CustId>0300044</CustId>
+            </RetCustInqRq>
+        </RetCustInqRequest>
+    </Body>
+</FIXML>

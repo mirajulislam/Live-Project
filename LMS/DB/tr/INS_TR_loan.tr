@@ -1,0 +1,11 @@
+#include <nSMART_SQL.h>
+
+#define _TR_NAME			{INS_TR_loan};
+#define _TABLE_NAME			{T_LOAN};
+#define _TABLE_NAME_AUDIT	{T_LOAN_AUDIT};
+#define _PRIMARY_KEY		{id_loan_key};
+#define _VERSION			{id_loan_ver};
+
+_DROP_TRIGGER
+
+_CREATE_TRIGGER (_TR_NAME)

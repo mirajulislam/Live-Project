@@ -1,0 +1,11 @@
+#include <nSMART_SQL.h>
+
+#define _TR_NAME			{INS_TR_customer};
+#define _TABLE_NAME			{T_CUSTOMER};
+#define _TABLE_NAME_AUDIT	{T_CUSTOMER_AUDIT};
+#define _PRIMARY_KEY		{id_customer_key};
+#define _VERSION			{id_customer_ver};
+
+_DROP_TRIGGER
+
+_CREATE_TRIGGER (_TR_NAME)

@@ -1,0 +1,10 @@
+
+ALTER TABLE T_LOAN
+ADD tx_guarantor_nid VARCHAR(256) NOT NULL
+CONSTRAINT ck_tx_guarantor_nid DEFAULT '?'
+WITH VALUES
+
+ALTER TABLE T_LOAN_AUDIT 
+ADD tx_guarantor_nid VARCHAR(256) NOT NULL
+CONSTRAINT ck_a_tx_guarantor_nid DEFAULT '?'
+WITH VALUES

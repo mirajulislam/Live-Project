@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<html manifest="">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="resources/app.css">
+
+    <!-- use to nostro file upload as extjs give failure response all time bcz of cross origin problem -->
+   <!-- <script type=text/javascript>document.domain =document.domain;</script> -->
+
+    <title id="titleTagnLms"></title>
+
+    <script type="text/javascript">
+
+        versionTag = "v1.2.5";
+
+        window.onbeforeunload = function(e) {
+
+            
+            document.getElementById("titleTagnLms").innerHTML ="LMS - " + versionTag;
+
+            if(loginUser && isLoggedOutAfterBrowserRefresh){
+                var headerInfo = {
+                        objectType  : 'USER',
+                        actionType  : 'LOGOUT',
+                        source      : 'nSCREEN'//// change this source : 'LMS' when user does not get logged in with Bank Asia UAT server
+                };
+
+                var payLoadInfo = [{
+                    unId            : loginUser.unId,
+                    password        : 'null',
+                    userIdModified  : loginUser.id,
+                    id              : loginUser.id
+                }];
+
+                var jsonObj = {
+                        header  : headerInfo,
+                        payLoad : payLoadInfo
+                };
+
+                var jsonString = JSON.stringify(jsonObj, replacer);
+
+                Ext.Ajax.request({
+                    url     : LOGIN_URL,
+                    method  : 'POST',
+                    params  : jsonString,
+                    success : function(result, request){
+                        loginUser = null;
+                        
+                        if(isSessionStore){
+                            sessionStorage.removeItem('loginUser');
+                        }
+
+                        if(isLocalStore){
+                           localStorage.removeItem('loginUser');
+                        }
+                    },
+                    failure : function(result, request){
+
+                    }
+                });
+            }
+
+            var start = +new Date;
+            while ((+new Date - start) < 6000);
+
+            return null;
+        }
+    </script>
+
+    <script type="text/javascript" src="common/json2.js"></script>
+    <script type="text/javascript" src="common/ServerConfig.js"></script>
+    <script type="text/javascript" src="common/CommonFunctions.js"></script>
+    
+    <!-- The line below must be kept intact for Sencha Cmd to build your application -->
+    <script id="microloader" type="text/javascript" src="bootstrap.js"></script>
+    <!-- <script type="text/javascript" src="sass/src/App.scss"></script> -->
+
+</head>
+<body background="desk.jpg"></body>
+</html>

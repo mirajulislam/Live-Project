@@ -1,0 +1,78 @@
+1. If need new state then add only T_FSM_STATE sheet
+2. If need new action then add only T_FSM_ACTION sheet
+3. If need CURRENT_STATE --> ACTION --> NEXT_STATE then add only T_FSM_STATE_TRANSITION sheet
+4. If need STATE wise loan see for user then add only T_ROLE_STATE_MAP sheet
+5. If need recommend/return to user then add only T_STATE_RECOMMEND_RETURN_MAP sheet
+
+
+// 14-Oct-2020 Assaduzzaman sohan
+/*
+// T_FSM_STATE_TRANSITION
+CA	LOAN	RM_APPROVED	CA_UPDATE	CA_UPDATED
+CA	LOAN	UH_APPROVED	CA_UPDATE	CA_UPDATED
+CA	LOAN	RM_APPROVED	CA_SEND_QUERY	CA_SENT_QUERY
+CA	LOAN	UH_APPROVED	CA_SEND_QUERY	CA_SENT_QUERY
+*/
+
+// 18-Oct-2020 Assaduzzaman sohan
+/*
+INSERT INTO T_FSM_ACTION VALUES(110068, 0, 1, 100000, 10008, GETDATE(), 100008, 110000, 'CAD_QUERY_TO_SO', '' )
+INSERT INTO T_FSM_ACTION VALUES(110069, 0, 1, 100000, 10008, GETDATE(), 100008, 110000, 'CAD_QUERY_TO_CA', '' )
+INSERT INTO T_FSM_ACTION VALUES(110070, 0, 1, 100000, 10008, GETDATE(), 100008, 110000, 'SO_CAD_QUERY_UPDATE', '' )
+INSERT INTO T_FSM_ACTION VALUES(110071, 0, 1, 100000, 10008, GETDATE(), 100008, 110000, 'CA_CAD_QUERY_UPDATE', '' )
+
+
+INSERT INTO T_FSM_STATE VALUES(110074, 0, 1, 100000, 100000, GETDATE(), 100000, 110000, 'CAD_SENT_QUERY_TO_SO', '?' ,'SENT_QUERY')
+INSERT INTO T_FSM_STATE VALUES(110071, 0, 1, 100000, 100000, GETDATE(), 100000, 110000, 'CAD_SENT_QUERY_TO_CA', '?' ,'SENT_QUERY')
+INSERT INTO T_FSM_STATE VALUES(110072, 0, 1, 100000, 100000, GETDATE(), 100000, 110000, 'SO_CAD_QUERY_UPDATED', '?' ,'QUERY_UPDATED')
+INSERT INTO T_FSM_STATE VALUES(110073, 0, 1, 100000, 100000, GETDATE(), 100000, 110000, 'CA_CAD_QUERY_UPDATED', '?' ,'QUERY_UPDATED')
+
+
+
+EXEC INS_fsm_state_transition @tx_fsm_type_name='LOAN', @tx_state_name='SENT_TO_CAD', @tx_action_name='CAD_QUERY_TO_SO', @tx_next_state_name='CAD_SENT_QUERY_TO_SO',  @tx_login_name='nazdaq_prod'
+EXEC INS_fsm_state_transition @tx_fsm_type_name='LOAN', @tx_state_name='SENT_TO_CAD', @tx_action_name='CAD_QUERY_TO_CA', @tx_next_state_name='CAD_SENT_QUERY_TO_CA',  @tx_login_name='nazdaq_prod'
+EXEC INS_fsm_state_transition @tx_fsm_type_name='LOAN', @tx_state_name='CAD_SENT_QUERY_TO_SO', @tx_action_name='SO_CAD_QUERY_UPDATE', @tx_next_state_name='SO_CAD_QUERY_UPDATED',  @tx_login_name='nazdaq_prod'
+EXEC INS_fsm_state_transition @tx_fsm_type_name='LOAN', @tx_state_name='CAD_SENT_QUERY_TO_CA', @tx_action_name='CA_CAD_QUERY_UPDATE', @tx_next_state_name='CA_CAD_QUERY_UPDATED',  @tx_login_name='nazdaq_prod'
+
+EXEC INS_fsm_state_transition @tx_fsm_type_name='LOAN', @tx_state_name='SO_CAD_QUERY_UPDATED', @tx_action_name='SO_CAD_QUERY_UPDATE', @tx_next_state_name='SO_CAD_QUERY_UPDATED',  @tx_login_name='nazdaq_prod'
+EXEC INS_fsm_state_transition @tx_fsm_type_name='LOAN', @tx_state_name='CA_CAD_QUERY_UPDATED', @tx_action_name='CA_CAD_QUERY_UPDATE', @tx_next_state_name='CA_CAD_QUERY_UPDATED',  @tx_login_name='nazdaq_prod'
+
+
+
+
+EXEC ACT_role_state_map @tx_action_name = 'NEW', @id_user_mod_key = 100000, @tx_fsm_state_name='SO_CAD_QUERY_UPDATED', @tx_role_name = 'CAD', @int_permission = 1, @tx_comment = '?'
+EXEC ACT_role_state_map @tx_action_name = 'NEW', @id_user_mod_key = 100000, @tx_fsm_state_name='CAD_SENT_QUERY_TO_SO', @tx_role_name = 'CAD', @int_permission = 1, @tx_comment = '?'
+EXEC ACT_role_state_map @tx_action_name = 'NEW', @id_user_mod_key = 100000, @tx_fsm_state_name='CA_CAD_QUERY_UPDATED', @tx_role_name = 'CAD', @int_permission = 1, @tx_comment = '?'
+EXEC ACT_role_state_map @tx_action_name = 'NEW', @id_user_mod_key = 100000, @tx_fsm_state_name='CAD_SENT_QUERY_TO_CA', @tx_role_name = 'CAD', @int_permission = 1, @tx_comment = '?'
+
+EXEC ACT_role_state_map @tx_action_name = 'NEW', @id_user_mod_key = 100000, @tx_fsm_state_name='CAD_SENT_QUERY_TO_CA', @tx_role_name = 'CREDIT_ANALYST', @int_permission = 1, @tx_comment = '?'
+EXEC ACT_role_state_map @tx_action_name = 'NEW', @id_user_mod_key = 100000, @tx_fsm_state_name='CA_CAD_QUERY_UPDATED', @tx_role_name = 'CREDIT_ANALYST', @int_permission = 1, @tx_comment = '?'
+
+EXEC ACT_role_state_map @tx_action_name = 'NEW', @id_user_mod_key = 100000, @tx_fsm_state_name='CAD_SENT_QUERY_TO_SO', @tx_role_name = 'SOURCE_OFFICER', @int_permission = 1, @tx_comment = '?'
+EXEC ACT_role_state_map @tx_action_name = 'NEW', @id_user_mod_key = 100000, @tx_fsm_state_name='SO_CAD_QUERY_UPDATED', @tx_role_name = 'SOURCE_OFFICER', @int_permission = 1, @tx_comment = '?'
+
+EXEC INS_fsm_state_transition @tx_fsm_type_name='LOAN', @tx_state_name='SO_CAD_QUERY_UPDATED', @tx_action_name='GENERATE_SL', @tx_next_state_name='SL_GENERATED',  @tx_login_name='nazdaq_prod'
+EXEC INS_fsm_state_transition @tx_fsm_type_name='LOAN', @tx_state_name='CA_CAD_QUERY_UPDATED', @tx_action_name='GENERATE_SL', @tx_next_state_name='SL_GENERATED',  @tx_login_name='nazdaq_prod'
+
+*/
+//18-10-2020 Mirajul Islam
+/*
+EXEC INS_fsm_state_transition @tx_fsm_type_name='LOAN', @tx_state_name='SO_CAD_QUERY_UPDATED', @tx_action_name='SO_CAD_QUERY_UPDATE', @tx_next_state_name='SO_CAD_QUERY_UPDATED',  @tx_login_name='nazdaq_prod'
+EXEC INS_fsm_state_transition @tx_fsm_type_name='LOAN', @tx_state_name='CA_CAD_QUERY_UPDATED', @tx_action_name='CA_CAD_QUERY_UPDATE', @tx_next_state_name='CA_CAD_QUERY_UPDATED',  @tx_login_name='nazdaq_prod'
+*/
+
+
+// 20-Oct-2020 Assaduzzaman sohan
+/*
+	
+INSERT INTO T_FSM_STATE VALUES(110071, 0, 1, 100000, 100000, GETDATE(), 100000, 110000, 'CAD_SENT_QUERY_TO_CA', '?' ,'CAD_QUERY_CA')
+INSERT INTO T_FSM_STATE VALUES(110072, 0, 1, 100000, 100000, GETDATE(), 100000, 110000, 'SO_CAD_QUERY_UPDATED', '?' ,'SO_CAD_QUERY_UPDATED')
+INSERT INTO T_FSM_STATE VALUES(110073, 0, 1, 100000, 100000, GETDATE(), 100000, 110000, 'CA_CAD_QUERY_UPDATED', '?' ,'CA_CAD_QUERY_UPDATED')
+INSERT INTO T_FSM_STATE VALUES(110074, 0, 1, 100000, 100000, GETDATE(), 100000, 110000, 'CAD_SENT_QUERY_TO_SO', '?' ,'CAD_QUERY_SO')
+*/
+
+
+// 2020-11-25
+ADDED(T_ROLE_STATE_MAP): 
+UNIT_HEAD	RM_DEFERED	1
+UNIT_HEAD	RM_DECLINED	1

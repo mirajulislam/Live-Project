@@ -1,0 +1,11 @@
+#include <nSMART_SQL.h>
+
+#define _TR_NAME			{INS_TR_lms_sms};
+#define _TABLE_NAME			{T_LMS_SMS};
+#define _TABLE_NAME_AUDIT	{T_LMS_SMS_AUDIT};
+#define _PRIMARY_KEY		{id_sms_key};
+#define _VERSION			{id_sms_version};
+
+_DROP_TRIGGER
+
+_CREATE_TRIGGER (_TR_NAME)

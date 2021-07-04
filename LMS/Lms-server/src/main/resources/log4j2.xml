@@ -1,0 +1,55 @@
+<Configuration status="INFO">
+	<Properties>
+		<Property name="base.dir">C:/Logs/LMS</Property>
+		<!-- <Property name="base.dir">/home/Logs/LMS</Property> -->
+		<Property name="log.file.name">lms-server</Property>
+	</Properties>
+
+	<Appenders>
+
+
+		<Console name="Console" target="SYSTEM_OUT">
+			<PatternLayout>
+				<Pattern>%d %p %c{1.} [%t] %m%n</Pattern>
+			</PatternLayout>
+		</Console>
+
+
+		<RollingRandomAccessFile
+			name="LogToRollingRandomAccessFile"
+			fileName="${base.dir}/${log.file.name}.log"
+			filePattern="${base.dir}/$${date:yyyy-MM}/${log.file.name}-%d{MM-dd-yyyy}-%i.log.gz">
+			<PatternLayout>
+				<Pattern>%d %p %c{1.} [%t] %m%n</Pattern>
+			</PatternLayout>
+			<Policies>
+				<TimeBasedTriggeringPolicy />
+
+			</Policies>
+			<DefaultRolloverStrategy max="10" />
+		</RollingRandomAccessFile>
+
+		<Async name="DAILY_FILE">
+			<!-- reference to other appenders -->
+			<AppenderRef ref="LogToRollingRandomAccessFile" />
+		</Async>
+
+	</Appenders>
+	<Loggers>
+		<Root level="INFO">
+			<AppenderRef ref="DAILY_FILE" />
+			<AppenderRef ref="Console" />
+		</Root>
+		<!-- avoid duplicated logs with additivity=false -->
+		<!-- <Logger name="com.naztech.lms" level="info" additivity="false">
+			<AppenderRef ref="DAILY_FILE" />
+		</Logger> -->
+
+		<!-- <Logger name="com.naztech.lms" level="info" additivity="false">
+			<AppenderRef ref="Console" />
+		</Logger> -->
+
+
+
+	</Loggers>
+</Configuration>

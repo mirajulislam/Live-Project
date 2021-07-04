@@ -1,0 +1,1447 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.8.0.final using JasperReports Library version 6.8.0-2ed8dfabb690ff337a5797129f2cd92902b0c87b  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Personal_Loan_BP_SL_Template" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a9e5317b-5798-48d8-9c5f-64b6ca479597">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="LMS_UAT"/>
+	<style name="Table 1_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 1_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="No Border" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.0" lineColor="#FFFFFF"/>
+			<topPen lineWidth="0.0" lineColor="#FFFFFF"/>
+			<leftPen lineWidth="0.0" lineColor="#FFFFFF"/>
+			<bottomPen lineWidth="0.0" lineColor="#FFFFFF"/>
+			<rightPen lineWidth="0.0" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<subDataset name="Empty Dataset1" uuid="cd0fd397-e18a-4e3a-9c86-f3cee75ed3b1"/>
+	<subDataset name="DS_FACILITY" uuid="83427594-ca85-43bf-b6dd-34a1998f6f5e">
+		<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="LMS_UAT"/>
+		<queryString language="SQL">
+			<![CDATA[]]>
+		</queryString>
+	</subDataset>
+	<subDataset name="P_special_terms_conditions" uuid="15ee00bd-3c1d-4245-8cbb-e3bac328c621">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+		<field name="applicationNo" class="java.lang.String"/>
+		<field name="condition" class="java.lang.String"/>
+	</subDataset>
+	<subDataset name="ConditionDataset" uuid="0207912b-d3c1-4660-9599-71b632d11121">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+		<field name="condition" class="java.lang.String"/>
+		<field name="applicationNo" class="java.lang.String"/>
+	</subDataset>
+	<parameter name="P_name" class="java.lang.String"/>
+	<parameter name="P_bp_id" class="java.lang.String"/>
+	<parameter name="P_date" class="java.lang.String"/>
+	<parameter name="P_ref" class="java.lang.String"/>
+	<parameter name="P_original_duplicate" class="java.lang.String"/>
+	<parameter name="P_department_address" class="java.lang.String"/>
+	<parameter name="P_so" class="java.lang.String"/>
+	<parameter name="P_permanent_address" class="java.lang.String"/>
+	<parameter name="P_req_letter_date" class="java.lang.String"/>
+	<parameter name="P_emi" class="java.lang.String"/>
+	<parameter name="P_limits" class="java.lang.String"/>
+	<parameter name="P_rate_interest" class="java.lang.String"/>
+	<parameter name="P_tenor_year" class="java.lang.String"/>
+	<parameter name="P_amount" class="java.lang.String"/>
+	<parameter name="P_zero_one_nos_cheques_amount" class="java.lang.String"/>
+	<parameter name="P_zero_three_nos_cheques_amount" class="java.lang.String"/>
+	<parameter name="P_special_terms_conditions_one" class="java.lang.String"/>
+	<parameter name="P_special_terms_conditions_two" class="java.lang.String"/>
+	<parameter name="P_special_terms_conditions_three" class="java.lang.String"/>
+	<parameter name="P_special_terms_conditions_four" class="java.lang.String"/>
+	<parameter name="P_capital_name" class="java.lang.String"/>
+	<parameter name="P_special_terms_header" class="java.lang.String"/>
+	<parameter name="P_special_terms_header_seq" class="java.lang.String"/>
+	<parameter name="P_special_terms_conditions" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<queryString language="SQL">
+		<![CDATA[select dtt_date = getdate()]]>
+	</queryString>
+	<field name="dtt_date" class="java.sql.Timestamp"/>
+	<variable name="REPORT_PAGE" class="java.lang.Integer" incrementType="Page" calculation="Highest">
+		<variableExpression><![CDATA[$V{PAGE_NUMBER}]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="780" splitType="Stretch">
+			<staticText>
+				<reportElement x="80" y="224" width="60" height="13" uuid="8a44dc19-7cda-498c-9a3b-a2458964a36e">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font fontName="SansSerif" size="9" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Facility:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="345" width="90" height="13" uuid="0767fe86-0b70-411c-9f62-872e981f02a9">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font fontName="SansSerif" size="9" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Securities: ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="389" width="134" height="13" uuid="149aaa60-39ac-412f-8b92-719f45173def">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font fontName="SansSerif" size="9" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Security Documentation:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="50" y="402" width="490" height="12" uuid="49f9a3b3-2dc2-4ce8-a528-9df2abc43cdb">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font fontName="SansSerif" size="8" isItalic="false"/>
+					<paragraph lineSpacing="Proportional" lineSpacingSize="1.5"/>
+				</textElement>
+				<text><![CDATA[4.1	Demand Promissory Note]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="50" y="450" width="490" height="12" uuid="80905313-d44a-4365-82b5-98eba59fe31a">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font fontName="SansSerif" size="8"/>
+					<paragraph lineSpacing="Proportional" lineSpacingSize="1.5"/>
+				</textElement>
+				<text><![CDATA[4.4	Memorandum of Deposit of Cheque(s)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="185" width="350" height="13" uuid="14b2af68-7519-4a53-bf99-0738530ac875">
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" markup="styled">
+					<font fontName="SansSerif" size="9" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[BANKING FACILITIES OFFER LETTER FOR GPF BACKED LOAN- BP]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="81" y="239" width="112" height="30" uuid="9a72f24e-accb-4b8d-bfbf-71426f8de217">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nature of 
+Facility(ies)
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="194" y="239" width="112" height="30" uuid="46c51094-2cbf-428c-8035-4e20f0d5580d">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Limit(s)
+(in lac)
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="306" y="239" width="112" height="30" uuid="8d922c6b-a597-484c-84d3-1d9db7cf05a9">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Rate of Interest]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="419" y="239" width="121" height="30" uuid="ae3398c7-5d4f-4402-b70d-8d7c22905286">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Expiry]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="306" y="269" width="112" height="30" uuid="8a0e05f6-cae6-4e5d-8d57-5472ad2dc83d">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="194" y="269" width="112" height="30" uuid="86e2c936-3956-4eb0-a3dd-b7b340b0cb49">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="81" y="269" width="112" height="30" uuid="0d2ac6f9-e89e-4aba-aaa2-442a7251e80c">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[GPF LOAN]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="40" y="90" width="240" height="12" uuid="24e7eb9e-6149-4fea-9785-56f6bc586e21">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA["NAME: "+$P{P_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="40" y="102" width="240" height="12" uuid="2a3b64c6-7029-48d7-b8ac-5bfea80ce87b">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA["BP ID: "+$P{P_bp_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="320" y="102" width="220" height="12" uuid="1ddd029b-7b34-4c26-bd1b-5183f2818546">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Date: "+$P{P_date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="40" y="114" width="240" height="24" uuid="928b876a-bce6-4dbc-8869-5cf07dafd97c">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Department with Address: " + $P{P_department_address}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="40" y="138" width="240" height="12" uuid="3fa77f1d-184d-45f2-b1b1-267c3524ce13">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA["S/o.: "+$P{P_so}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="194" y="269" width="112" height="30" uuid="6cee1b90-6ff5-4e86-bf51-e039c67f1f45">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{P_limits} == null || $P{P_limits}.equalsIgnoreCase("?") || $P{P_limits}.equalsIgnoreCase("null") ? "" : $P{P_limits}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="306" y="269" width="112" height="30" uuid="62441df2-ad83-434a-8747-a61e4232afe5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{P_rate_interest} == null || $P{P_rate_interest}.equalsIgnoreCase("?") || $P{P_rate_interest}.equalsIgnoreCase("null") ? "" : $P{P_rate_interest}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="90" y="426" width="450" height="24" uuid="19ad0aaf-3b39-4837-ba9b-2ba5a9f3b260">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" markup="styled">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA["04 Nos. Cheques (01 Cheque for Tk. " + "<style isBold='true'>" + ($P{P_zero_one_nos_cheques_amount} == null ? "(Not Given)" : $P{P_zero_one_nos_cheques_amount}) + "</style>" + " and 03 Nos. cheques for Tk . " + "<style isBold='true'>" + ($P{P_zero_three_nos_cheques_amount}  == null ? "(Not Given)" : $P{P_zero_three_nos_cheques_amount} ) + "</style>" +" each). All Cheques to be given in favor of Community Bank Bangladesh Limited"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="320" y="90" width="220" height="12" uuid="391cad71-9b35-4207-a00a-899ab31c38cd">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Ref : " + $P{P_ref}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="320" y="114" width="220" height="12" uuid="4f440b18-0fe4-4577-b610-13559abb6c18">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{P_original_duplicate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="80" y="317" width="460" height="24" uuid="a4ebea17-dbc8-4da1-99fc-08331a82dfd1">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" markup="styled">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA["<style isBold='true'>" +  $P{P_emi} +"</style>" + " number of EMI of BDT " + "<style isBold='true'>" + $P{P_amount} + "</style>" +"(Approx.) only to be realized from your salary account with  Community Bank Bangladesh Ltd.  from the following month of disbursement."]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="50" y="426" width="40" height="24" uuid="84928583-4ba7-4367-94ca-fe2dc8d3df13">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<text><![CDATA[4.3]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="418" y="269" width="122" height="30" uuid="f1dc09ea-a003-4c64-a2b1-23cc071406bd"/>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="styled">
+					<font fontName="SansSerif" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{P_tenor_year} +" years from the date of disbursement"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="40" y="150" width="240" height="20" uuid="d83d7233-73b6-4b81-863f-514400fa2d6f">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Permanent Address: " + $P{P_permanent_address}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="80" y="304" width="82" height="13" uuid="f6cb946d-76a8-4985-a6cb-2972adc03306">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font fontName="SansSerif" size="9" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Repayment:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="50" y="414" width="490" height="12" uuid="52421008-a4bb-4c37-a804-82a51f625842">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font fontName="SansSerif" size="8" isItalic="false"/>
+					<paragraph lineSpacing="Proportional" lineSpacingSize="1.5"/>
+				</textElement>
+				<text><![CDATA[4.2	Letter of Continuity]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="50" y="462" width="490" height="12" uuid="2ef33a7f-2ecf-4056-a578-d451e59cb1df">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font fontName="SansSerif" size="8"/>
+					<paragraph lineSpacing="Proportional" lineSpacingSize="1.5"/>
+				</textElement>
+				<text><![CDATA[4.5	Letter of Lien and Right to Set-off]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="50" y="498" width="490" height="12" uuid="3b60aa48-93d3-4d8c-836f-79c73cc7d0a8">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font fontName="SansSerif" size="8"/>
+					<paragraph lineSpacing="Proportional" lineSpacingSize="1.5"/>
+				</textElement>
+				<text><![CDATA[4.7	Letter of Authority (to apply end-service benefits for adjustment of Loan Liability)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="50" y="522" width="490" height="12" uuid="a1cd73f3-3e3f-432e-b71e-033f6e92d5d9">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font fontName="SansSerif" size="8"/>
+					<paragraph lineSpacing="Proportional" lineSpacingSize="1.5"/>
+				</textElement>
+				<text><![CDATA[4.9	Letter of Facility]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="50" y="534" width="490" height="12" uuid="0531241b-cc1c-4504-b511-3970b2575cbe">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font fontName="SansSerif" size="8"/>
+					<paragraph lineSpacing="Proportional" lineSpacingSize="1.5"/>
+				</textElement>
+				<text><![CDATA[4.10	Others, if required]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="50" y="474" width="40" height="24" uuid="eab44f52-61af-45fa-86b6-4565dcef7c8c">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<text><![CDATA[4.6]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="90" y="474" width="450" height="24" uuid="1d60508b-c719-4026-99c0-24d204afca7c">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified" markup="styled">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<text><![CDATA[Direct Debit Mandate for deduction of Instalments of Loan/Interest and other charges from your Bank Account with Community Bank Bangladesh Limited]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="50" y="358" width="490" height="12" uuid="8538e80c-aa99-4ac7-bb28-777b8c3ad370">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font fontName="SansSerif" size="8" isItalic="false"/>
+					<paragraph lineSpacing="Proportional" lineSpacingSize="1.5"/>
+				</textElement>
+				<text><![CDATA[3.1	Assurance on End-Service Benefit]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="50" y="370" width="490" height="12" uuid="7cc4a2c0-c1c5-4fc5-a1ff-b168becd7364">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font fontName="SansSerif" size="8" isItalic="false"/>
+					<paragraph lineSpacing="Proportional" lineSpacingSize="1.5"/>
+				</textElement>
+				<text><![CDATA[3.2	04 Nos Cheques]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="50" y="564" width="490" height="12" uuid="9602f1d8-ff21-496e-9393-71c5bc02cc11">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font fontName="SansSerif" size="8" isItalic="false"/>
+					<paragraph lineSpacing="Proportional" lineSpacingSize="1.5"/>
+				</textElement>
+				<text><![CDATA[5.1 	All Bank charges and commission payable as per Bank Policy]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="50" y="576" width="490" height="12" uuid="56de6681-4536-4ef1-8730-08d6fed22483">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font fontName="SansSerif" size="8" isItalic="false"/>
+					<paragraph lineSpacing="Proportional" lineSpacingSize="1.5"/>
+				</textElement>
+				<text><![CDATA[5.2 	Interest rate may be changed as per decision of the Bank Management from time to time]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="50" y="636" width="490" height="12" uuid="82568996-ec4d-4ab6-a792-ba168887b36f">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font fontName="SansSerif" size="8" isItalic="false"/>
+					<paragraph lineSpacing="Proportional" lineSpacingSize="1.5"/>
+				</textElement>
+				<text><![CDATA[5.5	EMI date will be 1st day of the following month from the date of disbursement]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="50" y="648" width="490" height="12" uuid="292b1068-96ed-40fc-a3a9-dc515ee371c7">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font fontName="SansSerif" size="8" isBold="true" isItalic="false"/>
+					<paragraph lineSpacing="Proportional" lineSpacingSize="1.5"/>
+				</textElement>
+				<text><![CDATA[5.6 	02% penal interest will be charged on the overdue amount]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="50" y="588" width="40" height="24" uuid="95ab52b9-cc7a-4769-af2c-1584664f6c26">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<text><![CDATA[5.3]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="90" y="588" width="450" height="24" uuid="011e59e2-6c40-460d-b8d4-7e56c09ac261">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified" markup="styled">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<text><![CDATA[Fees and charges for any revision / amendment in the credit limits, terms and conditions also be payable by you as per our schedule of charges]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="550" width="160" height="13" uuid="f8bfe444-e111-45d9-8df6-e60a5a77d59f">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font fontName="SansSerif" size="9" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Standard Terms & Conditions:]]></text>
+			</staticText>
+			<image>
+				<reportElement x="421" y="7" width="118" height="43" uuid="67bee311-01b4-4fd1-868e-3d6f59a8adde"/>
+				<imageExpression><![CDATA["Report_Logo.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="50" y="688" width="40" height="24" uuid="3476d582-5bd9-4c49-bd29-0354ceabe6e6">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<text><![CDATA[6.1]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="90" y="688" width="450" height="24" uuid="935e370a-a117-4291-a2e4-bc5e9ce7d7de">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified" markup="styled">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<text><![CDATA[Letter of Introduction (LoI) and Confirmation Letter will be issued by Appropriate Bangladesh Police Authority mentioning your salary details]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="662" width="150" height="13" uuid="edc905a2-61cb-49fb-8202-2d56f294b94b">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font fontName="SansSerif" size="9" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Other Terms and Conditions:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="85" y="676" width="450" height="12" uuid="447b3ee5-5257-4f13-9b90-83054af22e28">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" markup="styled">
+					<font fontName="SansSerif" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[You will comply with the following general terms and conditions:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="90" y="724" width="450" height="24" uuid="4fb67a49-37e9-46ff-a740-301283da6831">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified" markup="styled">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<text><![CDATA[Clean CIB Report will be taken from Bangladesh Bank before disbursement of loan. In this regard, prescribed letter of undertaking and declaration to be provided]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="50" y="724" width="40" height="24" uuid="5e6c5e09-6151-49d8-8a16-3cb2a114ed5a">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<text><![CDATA[6.3]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="50" y="510" width="490" height="12" isPrintWhenDetailOverflows="true" uuid="1171c624-86af-4b18-97a2-fc468510dcf1">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font fontName="SansSerif" size="8"/>
+					<paragraph lineSpacing="Proportional" lineSpacingSize="1.5"/>
+				</textElement>
+				<text><![CDATA[4.8	Confirmation Letter from the Bangladesh Police Authority for adjustment of loan liability]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="50" y="712" width="490" height="12" uuid="37898325-d911-4830-86a6-918b0c7ce8db">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font fontName="SansSerif" size="8" isItalic="false"/>
+					<paragraph lineSpacing="Proportional" lineSpacingSize="1.5"/>
+				</textElement>
+				<text><![CDATA[6.2	You will furnish /provide a Standing Instruction to collect EMI(s) amount from your account with CBBL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="399" y="510" width="141" height="12" isPrintWhenDetailOverflows="true" uuid="e3b9eb19-d97d-4389-8565-218ff4d63984">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font fontName="SansSerif" size="8"/>
+					<paragraph lineSpacing="Proportional" lineSpacingSize="1.5"/>
+				</textElement>
+				<text><![CDATA[from the End Service Benefit]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="90" y="612" width="450" height="24" uuid="38593d50-d8b6-4d01-84c9-e87b0219f974">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified" markup="styled">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<text><![CDATA[Installment amount to be kept in your Salary Account with Community Bank Bangladesh Limited (CBBL) each month for realization by the Bank]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="50" y="612" width="40" height="24" uuid="79d9086f-5d51-46c3-bf9b-0bcabed12ae5">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<text><![CDATA[5.4]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="224" width="31" height="13" uuid="d2022030-71a9-40c6-b075-6e5f21fce667">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<text><![CDATA[1.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="304" width="31" height="13" uuid="96746089-d1b4-4526-94e2-18c356033dc1">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<text><![CDATA[2.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="345" width="31" height="13" uuid="a1013aa0-8f02-4c95-8c59-b6e2697d91c9">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<text><![CDATA[3.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="389" width="31" height="13" uuid="185ccee3-feda-427f-9d06-88534ebee7d8">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<text><![CDATA[4.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="550" width="31" height="13" uuid="d00d696b-8c86-4561-9b83-55a88632425f">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<text><![CDATA[5.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="662" width="31" height="13" uuid="a2737b0a-8d57-49c4-931d-eac2b8e0ad77">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<text><![CDATA[6.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="411" y="722" width="158" height="12" uuid="aab083f6-c621-47c5-b11e-1d4bdf9f59cf">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[with CBBL]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="40" y="198" width="500" height="24" uuid="7167c9d5-19f0-45a9-9820-f4e4149be3ed">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA["With reference to your request letter dated " + $P{P_req_letter_date} + " we are pleased to inform you that the bank has approved the following facility in your favor, which is to be utilized strictly in accordance with the terms and conditions mentioned here under:"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="250" y="207" width="296" height="12" uuid="1887d9d1-3e72-4ecb-bfb8-bc003ed5430e">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[terms and conditions mentioned here under:]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="377" splitType="Stretch">
+			<staticText>
+				<reportElement x="90" y="127" width="450" height="12" uuid="79eee806-133e-4e96-a047-001967094c54">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified">
+					<font fontName="SansSerif" size="8"/>
+					<paragraph lineSpacing="Proportional" lineSpacingSize="1.5"/>
+				</textElement>
+				<text><![CDATA[No deviation of Bangladesh Bank Circular/ Regulations/ Guidelines will be allowed]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="50" y="127" width="40" height="12" uuid="61ab15a9-c415-4c1f-82ef-3443b6a600f0">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font fontName="SansSerif" size="8"/>
+					<paragraph lineSpacing="Proportional" lineSpacingSize="1.5"/>
+				</textElement>
+				<text><![CDATA[6.6]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="50" y="138" width="40" height="24" uuid="efbdbe61-4219-4029-8a54-6716c2395098">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font fontName="SansSerif" size="8"/>
+					<paragraph lineSpacing="Proportional" lineSpacingSize="1.5"/>
+				</textElement>
+				<text><![CDATA[6.7]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="50" y="180" width="40" height="36" uuid="0bd651c2-6f59-4222-9ef0-9cd27e1a1f32">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<text><![CDATA[6.9]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="90" y="180" width="450" height="36" uuid="a122f5c9-2527-4d99-8c2d-69133f8e61a0">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified" verticalAlignment="Top" markup="styled">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<text><![CDATA[All expenses and incidental costs and charges, incurred by the Bank in relation to granting of the facilities and taking, registering and enforcing, if necessary, of securities relating thereto shall be charged to you and you shall duly liquidate the same forthwith on demand by the Bank]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="50" y="210" width="40" height="48" uuid="c4347d5f-7fd9-443f-aa91-07b9e0a4307e">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<text><![CDATA[6.10]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="90" y="210" width="450" height="48" uuid="4c019069-cf72-4d27-ae11-ea3835ac5b55">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified" markup="styled">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<text><![CDATA[You shall pay/ reimburse the Bank any and all taxes, duties and levies (excluding tax on the corporate income of the Bank) as may be imposed or levied upon the Bank in any manner arising from any agreement which may be executed or from the facilities herein advised or from or in respect of any amounts payable by you to the Bank. For such taxes, duties and levies, the Bank shall be entitled and empowered to debit your account]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="50" y="250" width="40" height="48" uuid="73b53066-2e11-4592-a7cd-2f85c914fbaa">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<text><![CDATA[6.11]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="90" y="250" width="450" height="48" uuid="4503c131-2dde-4cbe-a7c3-2453f0a36935">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified" markup="styled">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<text><![CDATA[The availability and/or utilization of the Loan shall be subject to all applicable local laws and regulations of Bangladesh Bank, Clean CIB Report, and any other relevant policy, regulation or rule which may be affected from time to time, by any competent authority and/ or regulatory body, as determined by the Bank. Any penalty levied duty to non-compliance shall be on your account]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="90" y="311" width="450" height="24" uuid="62267ced-035c-4981-a598-cb5874cbe6f7">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified" verticalAlignment="Top" markup="styled">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<text><![CDATA[You shall furnish all such information, as the Bank may at any time and from time to time require from you relating to the position of the security, collateral, credit support and pecuniary liabilities]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="90" y="290" width="450" height="24" uuid="20b4bc2b-43c1-4533-8238-7759ab2bf778">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified" verticalAlignment="Top" markup="styled">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<text><![CDATA[The utilization of facilities shall be subject to prior completion of necessary formalities including fresh documentation and securities in consultation with the legal advisor of the Bank to its satisfaction]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="50" y="290" width="40" height="24" uuid="3be0e265-72a5-4b88-ba72-690ac2361167">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<text><![CDATA[6.12]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="50" y="311" width="40" height="24" uuid="f93f6b26-83fc-4039-88b6-88b3384c4632">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<text><![CDATA[6.13]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="90" y="159" width="450" height="24" uuid="286aa386-76f0-4594-bbea-4508531095a6">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified" markup="styled">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<text><![CDATA[The above facilities are valid up to and repayable on the respective expiry dates specified in clause [1] above and will be subject to review at the specified time]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="50" y="159" width="40" height="24" uuid="ea84b618-4ce4-4bd0-a721-e7fd0e6ffce3">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<text><![CDATA[6.8]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="50" y="106" width="40" height="24" uuid="1a7db817-8ca2-4de8-a248-df75ab063f4e">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<text><![CDATA[6.5]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="90" y="138" width="450" height="24" uuid="cbe51c77-1310-4402-b877-adeefa8288f2">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified" markup="styled">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<text><![CDATA[You agree to keep the contents of this letter strictly confidential, and not to disclose the terms contained herein to any other person or financial institution]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="50" y="85" width="40" height="24" uuid="0abd62b7-265d-410a-aa26-7b9895026a19">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<text><![CDATA[6.4]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="90" y="85" width="450" height="24" uuid="1c8a7f87-74df-47f6-abda-797fd7bf20df">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified" verticalAlignment="Top" markup="styled">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<text><![CDATA[All loan will be reported to CIB, Bangladesh Bank after disbursement irrespective of the amount outstanding. Classification Reporting will be as per Bangladesh Bank Regulations / Guidelines]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="90" y="106" width="450" height="24" uuid="0c2f0924-83f8-456b-a4ac-a03231b531d6">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified" markup="styled">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<text><![CDATA[Validity of credit approval is 45 days and after this duration re-approval should be taken with updated CIB and other necessary document as per requirement]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="304" y="238" width="156" height="12" uuid="faaa61ea-5b59-4bbc-ac0b-98e8b655f014">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font fontName="SansSerif" size="8"/>
+					<paragraph lineSpacing="Proportional" lineSpacingSize="1.5"/>
+				</textElement>
+				<text><![CDATA[with the Bank for such payments]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement key="" style="No Border" isPrintRepeatedValues="false" x="50" y="358" width="500" height="19" uuid="f3e1d029-6e28-48c3-aad3-cb1bb93a7d74">
+					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+					<property name="com.jaspersoft.studio.table.style.table_header" value="Table 1_TH"/>
+					<property name="com.jaspersoft.studio.table.style.column_header" value="Table 1_CH"/>
+					<property name="com.jaspersoft.studio.table.style.detail" value="Table 1_TD"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="P_special_terms_conditions" uuid="0bea0857-6936-4d7d-9b95-a5b3332dbf04">
+						<dataSourceExpression><![CDATA[$P{P_special_terms_conditions}]]></dataSourceExpression>
+					</datasetRun>
+					<jr:column width="40" uuid="5be1b1eb-a7af-4a96-aa8c-3a24a19b54ac">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column1"/>
+						<jr:detailCell style="No Border" height="19">
+							<textField>
+								<reportElement x="0" y="0" width="40" height="19" uuid="ec5e9d3e-f114-489d-8652-0a9cb3683262"/>
+								<box>
+									<pen lineColor="#FFFFFF"/>
+									<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+									<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+									<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+									<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+								</box>
+								<textElement>
+									<font size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{applicationNo}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="450" uuid="46b1f48e-e109-4123-b767-40e0a3ff09a2">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column2"/>
+						<jr:detailCell style="No Border" height="19">
+							<textField isStretchWithOverflow="true">
+								<reportElement x="0" y="0" width="450" height="19" uuid="8942fe7f-8cfc-47fa-99ef-34bfd8a28ea7"/>
+								<box topPadding="2" leftPadding="0" bottomPadding="2" rightPadding="0">
+									<pen lineWidth="0.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+									<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+									<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+									<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+									<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+								</box>
+								<textElement textAlignment="Justified">
+									<font size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{condition}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<textField>
+				<reportElement x="80" y="342" width="160" height="13" uuid="4a8319fc-dbe7-44c0-bae8-b597311e9767">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="9" isBold="true" isUnderline="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{P_special_terms_header}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="40" y="342" width="25" height="13" uuid="ae9ebd8a-a8db-42e2-8deb-3524e042723f">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{P_special_terms_header_seq}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="298" y="94" width="100" height="12" uuid="73031819-d5d6-4dad-9a84-6ecd5346aa3f">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Guidelines]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="202" y="199" width="100" height="12" uuid="8770f107-e576-4965-b5be-9f7fb778d6c8">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[the Bank]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="290" y="299" width="166" height="12" uuid="99650436-454e-4b83-8772-fcdcad840240">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Bank to its satisfaction]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="285" y="320" width="144" height="12" uuid="c5455355-0b99-4bc8-8b6f-8491fe130bf0">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[pecuniary liabilities]]></text>
+			</staticText>
+			<image>
+				<reportElement x="421" y="7" width="118" height="43" uuid="9a9a7a94-7f21-40a1-b997-647a7fdc1df5"/>
+				<imageExpression><![CDATA["Report_Logo.png"]]></imageExpression>
+			</image>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="22" splitType="Stretch">
+			<textField>
+				<reportElement x="298" y="9" width="20" height="13" uuid="2b1c88d1-4cb8-4b1b-a6d6-a532e4873371">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="325" y="9" width="20" height="13" uuid="7aba2033-3b78-47be-9858-08ea93fa9976">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="314" y="9" width="14" height="13" uuid="806f358a-4802-444d-8f90-c41db00ff9c5">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="10"/>
+				</textElement>
+				<text><![CDATA[of]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="274" y="9" width="30" height="13" uuid="adf3459c-8297-45d9-ad0d-97ff508e2fa8">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="10"/>
+				</textElement>
+				<text><![CDATA[Page]]></text>
+			</staticText>
+			<line>
+				<reportElement x="30" y="6" width="510" height="1" uuid="2c3fe135-c24a-4678-a234-936a5b55f074">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+			</line>
+			<staticText>
+				<reportElement x="60" y="9" width="160" height="13" uuid="474128cd-0b38-422d-b80e-030d6dfcc98f"/>
+				<textElement textAlignment="Left">
+					<font fontName="SansSerif"/>
+				</textElement>
+				<text><![CDATA[Banking Facilities Offer Letter]]></text>
+			</staticText>
+			<textField evaluationTime="Master">
+				<reportElement x="424" y="8" width="135" height="13" uuid="e50a8371-e46b-4bf6-ad31-88d19ecaf86a">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Top"/>
+				<textFieldExpression><![CDATA[$V{MASTER_CURRENT_PAGE}.intValue() == ($V{MASTER_TOTAL_PAGES}.intValue() - 1) ? "Borrower’s Signature" : ""]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="165" y="9" width="54" height="13" uuid="6add5256-942b-4fae-8e6c-49387aaf928e">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<text><![CDATA[Letter]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="802" splitType="Stretch">
+			<staticText>
+				<reportElement x="40" y="85" width="490" height="75" uuid="3f189b6b-fa52-45e0-8576-4bce4e9fc289">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font fontName="SansSerif" size="9"/>
+				</textElement>
+				<text><![CDATA[Please note that the contents of this letter are an offer of some of the terms and conditions on the basis of which the facility/ facilities requested by you shall be granted. However, the Bank reserves the right to, without prior notice, modify or cancel the terms and conditions upon which the facilities shall be granted or to revoke the entire offer to grant the facility itself, and nothing contained in this letter should be construed as a legally binding commitment on the part of the Bank to grant the requested facility/ facilities.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToTallestObject" x="40" y="162" width="490" height="45" uuid="23493ab4-6055-4705-bf3c-2c14ef433c88">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font fontName="SansSerif" size="9"/>
+				</textElement>
+				<text><![CDATA[Kindly confirm your agreement and acceptance of the aforementioned facility (ies), securities, terms and conditions by signing on each page of the offer letter and return the same to the Bank within ten (10) days from the date of this letter, failing which the offer of facility / facilities shall stand, lapsed / cancelled.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="222" width="140" height="20" uuid="9847e83d-cd7c-4c4a-895a-d6f3b8c674ab">
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font fontName="SansSerif" size="10"/>
+				</textElement>
+				<text><![CDATA[Yours faithfully,]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="59" y="317" width="221" height="27" uuid="4f73cdaa-75e2-41a9-8f1e-c61b1d434973">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font fontName="SansSerif" size="16" isBold="false"/>
+				</textElement>
+				<text><![CDATA[---------------------------------]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="60" y="329" width="169" height="20" uuid="c79c65e7-2fb1-4878-963f-09db9accb974">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font fontName="SansSerif" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Authorized Signature]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="342" y="317" width="221" height="27" uuid="a331a9e7-0a48-4ddf-86cd-4eb2a77617f8">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font fontName="SansSerif" size="16" isBold="false"/>
+				</textElement>
+				<text><![CDATA[---------------------------------]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="344" y="328" width="171" height="20" uuid="a6265a5f-373b-4f12-a14e-203146669b1c">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font fontName="SansSerif" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Authorized Signature]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="162" y="401" width="255" height="21" uuid="7dcadfaf-26ea-499a-931a-22229167be9d"/>
+				<textElement textAlignment="Left">
+					<font fontName="SansSerif" size="12"/>
+				</textElement>
+				<text><![CDATA[ACKNOWLEDGEMENT AND ACCEPTANCE]]></text>
+			</staticText>
+			<line>
+				<reportElement x="162" y="418" width="242" height="1" uuid="3acf53e7-a0af-4491-ba57-9843ebc90ce5">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+			</line>
+			<staticText>
+				<reportElement x="45" y="714" width="25" height="20" uuid="6697a287-8a71-4ca5-838e-f4681c0bf528">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font fontName="SansSerif" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[1.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="373" y="714" width="25" height="20" uuid="ec687936-6c34-4abc-bf9f-08a92560e3d6">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font fontName="SansSerif" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[2.]]></text>
+			</staticText>
+			<line>
+				<reportElement x="57" y="725" width="150" height="1" uuid="6cd9e20a-fbdf-4421-b7f5-fb8d9f8eb7a3">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+			</line>
+			<line>
+				<reportElement x="383" y="725" width="150" height="1" uuid="b7f5a627-6eb1-484d-a98a-95bcf11e5d4a">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+			</line>
+			<staticText>
+				<reportElement x="40" y="606" width="50" height="20" uuid="3ec187d8-9d7e-4c25-a387-17ffabacebf0">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font fontName="SansSerif" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Signed]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="41" y="646" width="80" height="17" uuid="2b726933-5a31-4426-ab32-f60a98f87b46">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font fontName="SansSerif" size="12" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Witnesses:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="384" y="622" width="50" height="20" uuid="a01e00ac-4df5-4c5f-a315-315c5c34920a">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font fontName="SansSerif" size="12"/>
+				</textElement>
+				<text><![CDATA[Date:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="41" y="625" width="239" height="20" uuid="e4d1ff7d-e653-4b0d-8f35-80d9a0da9aa4">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font fontName="SansSerif" size="12" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[(Signature of the Borrower)]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="41" y="496" width="490" height="80" uuid="7e823264-2180-4fdb-8563-d0dd6a816ab2">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" markup="styled">
+					<font fontName="SansSerif" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA["I , "+"<style isBold='true'>" + $P{P_capital_name} + "</style>" + ", CONFIRM THAT THE LIMIT(S) OF FACILITY/FACILITIES AND THE TERMS AND CONDITIONS MENTIONED IN THIS LETTER ARE ACKNOWLEDGED AND ACCEPTED BY ME/US AND AS A TOKEN OF THIS ACCEPTANCE I/WE AFFIX MY/OUR SIGNATURES BELOW."]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="40" y="10" width="490" height="75" uuid="d4971010-5c92-4a8a-a87d-eb1ef0173fda">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font fontName="SansSerif" size="9"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="298" y="789" width="20" height="13" uuid="8f7a02bc-79c9-4a2a-a07b-9bb7908e2b2b">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="325" y="789" width="20" height="13" uuid="7de71e43-0143-4966-a6ba-44ca1246e221">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="314" y="789" width="14" height="13" uuid="532954fa-df3a-4b1f-839a-f26e45486df4">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="10"/>
+				</textElement>
+				<text><![CDATA[of]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="274" y="789" width="30" height="13" uuid="ac7e44c4-4333-42fb-91ab-4bec9ceebbf7">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="10"/>
+				</textElement>
+				<text><![CDATA[Page]]></text>
+			</staticText>
+			<line>
+				<reportElement x="30" y="788" width="510" height="1" uuid="4dd39e8e-8e70-4048-b829-e4f52e2909ff">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+			</line>
+			<staticText>
+				<reportElement x="60" y="789" width="149" height="13" uuid="cde763ce-8476-443d-9e7a-01094d8d49a1">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font fontName="SansSerif"/>
+				</textElement>
+				<text><![CDATA[Banking Facilities Offer Letter]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="165" y="789" width="44" height="13" uuid="12ff0626-b459-46c9-a672-f3ffd95799b8">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<text><![CDATA[Letter]]></text>
+			</staticText>
+			<image>
+				<reportElement x="421" y="7" width="118" height="43" uuid="fb15a0b3-04c6-41fa-a9ab-e393643a49b3"/>
+				<imageExpression><![CDATA["Report_Logo.png"]]></imageExpression>
+			</image>
+		</band>
+	</summary>
+</jasperReport>

@@ -1,0 +1,53 @@
+{
+  "header": {
+    "apiKey": "sfdsfsd-sdf-dsf-sdf-sd-fds-f125", //MANDATORY [naztech will provide]
+    "contentType": "NationalId", //MANDATORY
+    "actionType": "FETCH",//["FETCH","COMPARE"] // MANDATORY and FIXED IN COMMENTED VALUE
+    "requestType": "SYNC",//["SYNC", "ASYNC"] // MANDATORY and FIXED IN COMMENTED VALUE
+    "callbackUrl": "test.callback.url",// CONDITIONAL
+    "forceRefetch": true|false,//[true|false] MANDATORY AND FIXED IN COMMENTED VALUE
+  },
+  "payLoad": [
+    {
+      "nid": "12131654564843212316546", // MANDATORY
+      "dob": "2019-01-01", // MANDATORY [yyyyMMdd]
+
+      "name": "Mr. X", //OPTIONAL
+      "bloodGroup": "Mr. X", //OPTIONAL
+      "addrLine1": "Road 5", //OPTIONAL
+      "addrLine1": "", //OPTIONAL
+      "postOffice": "Banani", //OPTIONAL
+      "postCode": "Banani", //OPTIONAL
+      "policeStation": "Banani", //OPTIONAL
+      "district": "Dhaka" , //OPTIONAL
+      "division": "Dhaka" , //OPTIONAL
+    }
+  ]
+}
+
+
+How to use this json:
+Header : 
+  actionType : 
+    FETCH : Fetch data from nid server and return two url (one for nid details and other one for nid person image)(1*)
+    COMPARE : Fetch data from nid server and extract data from NID details picture than compare with given data. it will return comparing data along with two image url. [NOT SUPPORED YET]
+
+  requestType : 
+    SYNC : Fetch data from nid server and return as HTTP response. It block your thread until we give you response. it will applicable in [actionType = [FETCH], [COMPARE]]
+    ASYNC : Take the request and send back an acknolagement immediately without blocking the thread. Internally we Fetch data from NID server and store it to our location.
+            If We find [callbackUrl] for this [ASYNC] request than after completing the rquest we will send data to given [callbackUrl]
+
+  forceRefetch : If [forceRefetch] is true than we all time get latest data from NID server. We ignore local cache.
+
+  callbackUrl : When [requestType] is [ASYNC] than we send a HTTP POST request to this url with data
+
+payLoad :
+  nid : NID of customer
+  dob : Date of birth of customer that in NID. This data must be [yyyy-MM-dd] format. exp : [2019-01-01]
+
+  
+  Other Field is optional for this request.
+
+
+
+

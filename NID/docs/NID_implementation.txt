@@ -1,0 +1,32 @@
+NID implementation
+
+
+work flow:
+	do some request validation 
+		check username/password if need
+		check mandatory data exist or not
+		check mandatory data is correct length
+
+	check info exist or not based on api data
+	if exist
+		check expire or forceRefetch or not based on configuration
+			if expire or forceRefetch
+				fetch data from nid server
+				update info to local db
+			else
+				-handle_Action
+		else
+			-handle_Action
+	else
+		fetch info form nid server
+		insert to local db
+		-handle_Action
+
+handle_Action
+	if action FETCH
+		return info
+	else if action COMPARE
+		compare api data with nid server data
+		return match or not(or return percentage of match)
+
+-- check requestType to send response

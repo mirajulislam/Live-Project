@@ -1,0 +1,36 @@
+{
+    "header": {
+        "actionType": "FETCH",
+        "utcTimestamp": 1576394932,
+        "destination": "NidScaper",
+        "source": "NidScaper",
+        "id": "f5e3d8f8-749f-4a98-8c03-88fdee31554b",
+        "contentType": "NationalId",
+        "tzName": "Asia/Dhaka"
+    },
+    "payload": {
+        "nid": "7618385232806",
+        "dob": "1989-05-05 00:00:00 +0600",
+        "extractTime": "2019-12-12 19:34:55 +0600",
+        "nidImagePath": "http://10.110.1.180:8080/NID/IMAGE/NID/7618385232806_19890505_n.png",
+        "nidImageName": "7618385232806_19890505_n.png",
+        "personImagePath": "http://10.110.1.180:8080/NID/IMAGE/PERSON/7618385232806_19890505_p.png",
+        "personImageName": "7618385232806_19890505_p.png",
+        "nidSource": 1,
+        "success": 1,
+        "comments" : ""
+    }
+}
+
+
+NID server back two image as response for one NID request.
+So We extract those two image and store in our local system.
+After, We producse two globally accessible url for those two image.
+Client softare can use that url to render image there page.
+
+Explanation: 
+    nidImagePath : Image for NID details data 
+    personImagePath : Image for NID person
+    nidSource : Indicate where we from give this response. [1 for local cache, 2 for NID server]
+    success : Indicate whether request success or not. [1 for success, 0 for fail. If Fail than client application can request again to get the data]
+    comments : Reason for fail

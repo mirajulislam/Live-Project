@@ -1,0 +1,121 @@
+{
+  "header": {
+    "source": "LMS",
+    "clientSource": {
+      "id": "controller-887",
+      "uniqueId": "controller-887",
+      "alias": [
+        "controller.admin-businessadministration-businessadmin"
+      ]
+    },
+    "objectType": "NConfiguration",
+    "contentType": "NConfiguration",
+    "actionType": "SAVE",
+    "userId": 110302,
+    "reference": "onClickSaveLoanType",
+    "appName": "LMS",
+    "envId": 100000,
+    "senderId": 110302,
+    "destination": "http://localhost:8083/jsonRequest",
+    "[object Object]": null,
+    "id": "118006d6-5999-4300-b312-cd8f2d2f7eb5",
+    "timestamp": 1577778030622,
+    "nMessageVer": "1.0.0",
+    "sequenceNumber": 2,
+    "clientUid": "b0c0a66b-5760-4cee-b607-17c1e1f57392"
+  },
+  "payload": [
+    {
+      "group": "FILE",
+      "subGroup": "RESPONSE",
+      "name" : "FINACLE_CUSTOMER_RES",
+      "value1": "test 5",
+      "value2": "362",
+      "userModKey": 110302
+    }
+  ]
+}
+
+
+
+
+
+
+
+
+{
+  "header": {
+    "source": "LMS",
+    "clientSource": {
+      "id": "controller-887",
+      "uniqueId": "controller-887",
+      "alias": [
+        "controller.admin-businessadministration-businessadmin"
+      ]
+    },
+    "objectType": "NConfiguration",
+    "contentType": "NConfiguration",
+    "actionType": "SAVE",
+    "userId": 110302,
+    "reference": "onClickSaveLoanType",
+    "appName": "LMS",
+    "envId": 100000,
+    "senderId": 110302,
+    "destination": "http://localhost:8083/jsonRequest",
+    "[object Object]": null,
+    "id": "118006d6-5999-4300-b312-cd8f2d2f7eb5",
+    "timestamp": 1577778030622,
+    "nMessageVer": "1.0.0",
+    "sequenceNumber": 2,
+    "clientUid": "b0c0a66b-5760-4cee-b607-17c1e1f57392"
+  },
+  "payload": [
+    {
+      "group": "FILE",
+      "subGroup": "RESPONSE",
+      "name" : "FINACLE_CUSTOMER_RES",
+      "value1": "C:\\Users\\md.kamruzzaman\\Desktop\\LMS\\file\\customer_res.xml",
+      "value2": "362",
+      "userModKey": 110302
+    }
+  ]
+}
+
+
+{
+  "header": {
+    "source": "LMS",
+    "clientSource": {
+      "id": "controller-887",
+      "uniqueId": "controller-887",
+      "alias": [
+        "controller.admin-businessadministration-businessadmin"
+      ]
+    },
+    "objectType": "NConfiguration",
+    "contentType": "NConfiguration",
+    "actionType": "SAVE",
+    "userId": 110302,
+    "reference": "onClickSaveLoanType",
+    "appName": "LMS",
+    "envId": 100000,
+    "senderId": 110302,
+    "destination": "http://localhost:8083/jsonRequest",
+    "[object Object]": null,
+    "id": "118006d6-5999-4300-b312-cd8f2d2f7eb5",
+    "timestamp": 1577778030622,
+    "nMessageVer": "1.0.0",
+    "sequenceNumber": 2,
+    "clientUid": "b0c0a66b-5760-4cee-b607-17c1e1f57392"
+  },
+  "payload": [
+    {
+      "group": "FILE",
+      "subGroup": "RESPONSE",
+      "name" : "I_OFFICE_CUSTOMER_RES",
+      "value1": "C:\\Users\\md.kamruzzaman\\Desktop\\LMS\\file\\res.xml",
+      "value2": "362",
+      "userModKey": 110302
+    }
+  ]
+}

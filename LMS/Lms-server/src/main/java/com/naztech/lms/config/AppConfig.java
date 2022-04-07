@@ -14,6 +14,24 @@ import org.springframework.web.multipart.commons.CommonsMultipartResolver;
 import com.nazdaqTechnologies.core.message.processor.json.gson.GsonJsonMessageProcessor;
 import com.nazdaqTechnologies.core.service.ServiceMap;
 import com.nazdaqTechnologies.jdbc.JdbcService;
+import com.naztech.lms.atmDispute.model.Complaint;
+import com.naztech.lms.atmDispute.service.ComplaintService;
+import com.naztech.lms.creditCard.model.AcquisitionApplicantDetails;
+import com.naztech.lms.creditCard.model.AcquisitionDetailsConfig;
+import com.naztech.lms.creditCard.model.CardConfig;
+import com.naztech.lms.creditCard.model.CardDocMap;
+import com.naztech.lms.creditCard.model.CardReport;
+import com.naztech.lms.creditCard.model.CreditCard;
+import com.naztech.lms.creditCard.model.Document;
+import com.naztech.lms.creditCard.model.SupplementAndReferDetails;
+import com.naztech.lms.creditCard.service.AcquisitionApplicantDetailsService;
+import com.naztech.lms.creditCard.service.AcquisitionDetailsConfigService;
+import com.naztech.lms.creditCard.service.CardConfigService;
+import com.naztech.lms.creditCard.service.CardDocMapService;
+import com.naztech.lms.creditCard.service.CardReportService;
+import com.naztech.lms.creditCard.service.CreditCardService;
+import com.naztech.lms.creditCard.service.DocumentService;
+import com.naztech.lms.creditCard.service.SupplementAndReferDetailsService;
 import com.naztech.lms.model.CibInformation;
 import com.naztech.lms.model.Comment;
 import com.naztech.lms.model.Customer;
@@ -31,6 +49,8 @@ import com.naztech.lms.model.Notes;
 import com.naztech.lms.model.Preference;
 import com.naztech.lms.model.Report;
 import com.naztech.lms.model.User;
+import com.naztech.lms.model.UserDocument;
+import com.naztech.lms.model.UserRegistration;
 import com.naztech.lms.service.CibInformationService;
 import com.naztech.lms.service.CommentService;
 import com.naztech.lms.service.CustomerService;
@@ -49,6 +69,8 @@ import com.naztech.lms.service.NotesService;
 import com.naztech.lms.service.PreferenceService;
 import com.naztech.lms.service.ReportService;
 import com.naztech.lms.service.ServiceCoordinator;
+import com.naztech.lms.service.UserDocumentService;
+import com.naztech.lms.service.UserRegistrationService;
 import com.naztech.lms.service.UserService;
 import com.naztech.lms.service.XmlBeanService;
 
@@ -88,6 +110,17 @@ public class AppConfig {
 		ob.addService(cibInformationService());
 		ob.addService(notesService());
 		ob.addService(lmsSmsService());
+		ob.addService(cardConfigService());
+		ob.addService(cardDocMapService());
+		ob.addService(creditCardService());
+		ob.addService(documentService());
+		ob.addService(cardReportService());
+		ob.addService(userRegistrationService());
+		ob.addService(userDocumentService());
+		ob.addService(acquisitionApplicantDetailsService());
+		ob.addService(supplementAndReferDetailsService());
+		ob.addService(acquisitionDetailsConfigService());
+		ob.addService(complaintService());
 		return ob;
 	}
 
@@ -112,6 +145,17 @@ public class AppConfig {
 		classMap.put(CibInformation.class.getSimpleName(), CibInformation.class.getName());
 		classMap.put(Notes.class.getSimpleName(),Notes.class.getName());
 		classMap.put(LmsSms.class.getSimpleName(),LmsSms.class.getName());
+		classMap.put(CardConfig.class.getSimpleName(),CardConfig.class.getName());
+		classMap.put(CardDocMap.class.getSimpleName(),CardDocMap.class.getName());	
+		classMap.put(CreditCard.class.getSimpleName(), CreditCard.class.getName());
+		classMap.put(Document.class.getSimpleName(), Document.class.getName());
+		classMap.put(CardReport.class.getSimpleName(), CardReport.class.getName());
+		classMap.put(UserRegistration.class.getSimpleName(), UserRegistration.class.getName());
+		classMap.put(UserDocument.class.getSimpleName(), UserDocument.class.getName());
+		classMap.put(AcquisitionApplicantDetails.class.getSimpleName(), AcquisitionApplicantDetails.class.getName());
+		classMap.put(SupplementAndReferDetails.class.getSimpleName(), SupplementAndReferDetails.class.getName());
+		classMap.put(AcquisitionDetailsConfig.class.getSimpleName(), AcquisitionDetailsConfig.class.getName());
+		classMap.put(Complaint.class.getSimpleName(), Complaint.class.getName());
 		gsn.setClassMap(classMap);
 		return gsn;
 	}
@@ -252,6 +296,80 @@ public class AppConfig {
 		LmsSmsService lmsSmsService = new LmsSmsService();
 		lmsSmsService.setJdbcService(jdbcService);
 		return lmsSmsService;
+	}
+	
+	@Bean
+	CardDocMapService cardDocMapService() {
+		CardDocMapService cardDocMapService = new CardDocMapService();
+		cardDocMapService.setJdbcService(jdbcService);
+		return cardDocMapService;
+	}
+	
+	@Bean
+	CardConfigService cardConfigService() {
+		CardConfigService cardConfigService = new CardConfigService();
+		cardConfigService.setJdbcService(jdbcService);
+		return cardConfigService;
+	}
+	
+	@Bean
+	CreditCardService creditCardService() {
+		CreditCardService creditCardService = new CreditCardService();
+		creditCardService.setJdbcService(jdbcService);
+		return creditCardService;
+	}
+	
+	@Bean
+	DocumentService documentService() {
+		DocumentService documentService = new DocumentService();
+		documentService.setJdbcService(jdbcService);
+		return documentService;
+	}
+	
+	@Bean
+	CardReportService cardReportService() {
+		CardReportService cardReportService = new CardReportService();
+		cardReportService.setJdbcService(jdbcService);
+		return cardReportService;
+	}
+	
+	@Bean
+	UserRegistrationService userRegistrationService() {
+		UserRegistrationService userRegistrationService = new UserRegistrationService();
+		userRegistrationService.setJdbcService(jdbcService);
+		return userRegistrationService;
+	}	
+	@Bean
+	UserDocumentService userDocumentService() {
+		UserDocumentService userDocumentService = new UserDocumentService();
+		userDocumentService.setJdbcService(jdbcService);
+		return userDocumentService;
+	}
+	@Bean
+	AcquisitionApplicantDetailsService acquisitionApplicantDetailsService() {
+		AcquisitionApplicantDetailsService acquisitionApplicantDetailsService = new AcquisitionApplicantDetailsService();
+		acquisitionApplicantDetailsService.setJdbcService(jdbcService);
+		return acquisitionApplicantDetailsService;
+	}
+	@Bean
+	SupplementAndReferDetailsService supplementAndReferDetailsService() {
+		SupplementAndReferDetailsService supplementAndReferDetailsService = new SupplementAndReferDetailsService();
+		supplementAndReferDetailsService.setJdbcService(jdbcService);
+		return supplementAndReferDetailsService;
+	}
+	
+	@Bean
+	AcquisitionDetailsConfigService acquisitionDetailsConfigService() {
+		AcquisitionDetailsConfigService acquisitionDetailsConfigService = new AcquisitionDetailsConfigService();
+		acquisitionDetailsConfigService.setJdbcService(jdbcService);
+		return acquisitionDetailsConfigService;
+	}
+	
+	@Bean
+	ComplaintService complaintService() {
+		ComplaintService complaintService = new ComplaintService();
+		complaintService.setJdbcService(jdbcService);
+		return complaintService;
 	}
 
 }

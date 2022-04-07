@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<IOFFICEGET>
+   <id>177149</id>
+   <salutation>MR.</salutation>
+   <first_name>MIR MOSTOFA</first_name>
+   <middle_name />
+   <last_name>HASAN</last_name>
+   <preferred_name>MIR MOSTOFA HASAN</preferred_name>
+   <short_name>MOSTOFA</short_name>
+   <bp>CIV7799147374</bp>
+   <bp_issue />
+   <phone1>01732898270</phone1>
+   <phone2 />
+   <email />
+   <father>MIR MEARAJ ALI</father>
+   <mother>BEGUM HOSNERA</mother>
+   <spouse>JANNATUL FERDOUS</spouse>
+   <dob>15-Dec-1977</dob>
+   <sex>M</sex>
+   <desig_sort>Office Assistant</desig_sort>
+   <income />
+   <nid>87278201152981</nid>
+   <nidissuedate />
+   <marital_status>MARID</marital_status>
+   <permananet_division>Khulna</permananet_division>
+   <permananet_district>Satkhira</permananet_district>
+   <permananet_zip>0000</permananet_zip>
+   <permananet_address>VILL KATIA PS SATKHIRA DIS SATKHIRA</permananet_address>
+   <present_division>Khulna</present_division>
+   <present_district>Satkhira</present_district>
+   <present_zip>0000</present_zip>
+   <present_address>VILL KATIA PS SATKHIRA DIS SATKHIRA</present_address>
+   <office_division>Khulna</office_division>
+   <office_district>Satkhira</office_district>
+   <office_zip>0000</office_zip>
+   <office_address>POLICE OFFICE SATKHIRA</office_address>
+   <com_address>Office Address</com_address>
+   <emer_phone>01752937699</emer_phone>
+   <regoin>Satkhira</regoin>
+   <Entry_User>Diptta Sarker</Entry_User>
+   <entrydate>2019-12-19 19:43:16</entrydate>
+   <passport />
+   <passportissue />
+   <cif>0179873</cif>
+   <ac>0010179873201</ac>
+   <POLICE_DIVISION>District</POLICE_DIVISION>
+   <POLICE_SUB_UNIT>Satkhira</POLICE_SUB_UNIT>
+   <POLICE_UNIT>POLICE OFFICE SATKHIRA</POLICE_UNIT>
+   <CONTRIBUTION_AMOUNT>27000</CONTRIBUTION_AMOUNT>
+   <depinst>NO</depinst>
+   <isrip>NO</isrip>
+   <isvip>NO</isvip>
+   <introduced />
+   <tpkyc />
+   <cbbl_branch>001</cbbl_branch>
+   <remarks />
+   <isreview>101</isreview>
+   <aplicantcheck />
+   <nomineecheck />
+   <totoday>19-Dec-2019</totoday>
+   <upstatus>FIOK</upstatus>
+   <supervisor>100035</supervisor>
+   <cif_status>SUCCESS</cif_status>
+   <cif_details>Retail Customer successfully updated with CIFID 0179873</cif_details>
+   <ac_status>SUCCESS</ac_status>
+   <ac_details>0010179873201</ac_details>
+</IOFFICEGET>

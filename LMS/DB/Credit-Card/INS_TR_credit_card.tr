@@ -1,0 +1,11 @@
+#include <nSMART_SQL.h>
+
+#define _TR_NAME			{INS_TR_credit_card};
+#define _TABLE_NAME			{T_CREDIT_CARD};
+#define _TABLE_NAME_AUDIT	{T_CREDIT_CARD_AUDIT};
+#define _PRIMARY_KEY		{id_credit_card_key};
+#define _VERSION			{id_credit_card_ver};
+
+_DROP_TRIGGER
+
+_CREATE_TRIGGER (_TR_NAME)

@@ -1,0 +1,11 @@
+#include <nSMART_SQL.h>
+
+#define _TR_NAME			{INS_TR_user_registration};
+#define _TABLE_NAME			{T_USER_REGISTRATION};
+#define _TABLE_NAME_AUDIT	{T_USER_REGISTRATION_AUDIT};
+#define _PRIMARY_KEY		{id_user_login_key};
+#define _VERSION			{id_user_login_var};
+
+_DROP_TRIGGER
+
+_CREATE_TRIGGER (_TR_NAME)

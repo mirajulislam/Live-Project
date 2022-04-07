@@ -1,7 +1,7 @@
 package com.naztech.lms.config;
 
-
-import org.apache.commons.dbcp.BasicDataSource;
+import org.apache.commons.dbcp2.BasicDataSource;
+//import org.apache.commons.dbcp.BasicDataSource;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.PropertySource;
@@ -9,6 +9,7 @@ import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 
 import com.nazdaqTechnologies.jdbc.JdbcService;
 import com.nazdaqTechnologies.jdbc.JdbcStatementFactory;
+
 /**
  * 
  * @author md.kamruzzaman
@@ -16,35 +17,34 @@ import com.nazdaqTechnologies.jdbc.JdbcStatementFactory;
  */
 @PropertySource("classpath:db.properties")
 public class DbConfig {
-	
+
 	@Value("${jdbc.url}")
 	String url;
-	
+
 	@Value("${jdbc.username}")
 	String username;
-	
+
 	@Value("${jdbc.password}")
 	String password;
-	
+
 	@Value("${jdbc.driver.class}")
 	private String driverClassName;
-		
+
 	@Value("${jdbc.max.active}")
 	int maxActive;
-	
+
 	@Value("${jdbc.max.idle}")
 	int maxIdle;
-	
+
 	@Value("${jdbc.auto.commit}")
 	boolean defaultAutoCommit;
-	
+
 	@Value("${jdbc.inital.size}")
 	int initialSize;
-	
 
 	@Value("${jdbc.validator.query}")
 	String validationQuery;
-	
+
 	@Bean
 	BasicDataSource dataSource() {
 		BasicDataSource ds = new BasicDataSource();
@@ -52,27 +52,29 @@ public class DbConfig {
 		ds.setUrl(url);
 		ds.setUsername(username);
 		ds.setPassword(password);
-		if(maxActive != 0) {
-			ds.setMaxActive(maxActive);
-		}
-		
-		if(maxIdle != 0) {
+//     comment this section for update naztech jdbc jar version .. 
+//		if (maxActive != 0) {
+//			ds.setMaxActive(maxActive);
+//			ds.setMaxIdle(maxIdle);
+//		}
+
+		if (maxIdle != 0) {
 			ds.setMaxIdle(maxIdle);
 		}
-		
-		if(initialSize != 0) {
+
+		if (initialSize != 0) {
 			ds.setInitialSize(initialSize);
 		}
-		
+
 		ds.setDefaultAutoCommit(defaultAutoCommit);
-		if(validationQuery != null && validationQuery.length()>0) {
+		if (validationQuery != null && validationQuery.length() > 0) {
 			ds.setValidationQuery(validationQuery);
 			ds.setTestOnBorrow(true);
 		}
-		
+
 		return ds;
 	}
-	
+
 	@Bean
 	JdbcService jdbcService() {
 		JdbcService jdbcService = new JdbcService();
@@ -81,18 +83,17 @@ public class DbConfig {
 		jdbcService.setJdbcStatementFactory(jdbcStatementFactory());
 		return jdbcService;
 	}
-	
+
 	@Bean
 	DataSourceTransactionManager dataSourceTransactionManager() {
 		DataSourceTransactionManager obj = new DataSourceTransactionManager();
 		obj.setDataSource(dataSource());
 		return obj;
 	}
-	
+
 	@Bean
 	JdbcStatementFactory jdbcStatementFactory() {
 		return new JdbcStatementFactory();
 	}
-	
 
 }

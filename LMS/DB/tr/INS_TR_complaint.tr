@@ -1,0 +1,11 @@
+#include <nSMART_SQL.h>
+
+#define _TR_NAME			{INS_TR_complaint};
+#define _TABLE_NAME			{T_COMPLAINT};
+#define _TABLE_NAME_AUDIT	{T_COMPLAINT_AUDIT};
+#define _PRIMARY_KEY		{id_customer_complaint_key};
+#define _VERSION			{id_customer_complaint_ver};
+
+_DROP_TRIGGER
+
+_CREATE_TRIGGER (_TR_NAME)

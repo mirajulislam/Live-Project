@@ -1,0 +1,1291 @@
+/*!
+* Ext JS Library 4.0
+* Copyright(c) 2006-2011 Sencha Inc.
+* licensing@sencha.com
+* http://www.sencha.com/license
+*/
+
+#poweredby {
+  position: absolute;
+  bottom: 40px;
+  right: 20px;
+  z-index: 15000;
+
+  /* IE 5-7 */
+  filter: alpha(opacity=70);
+  /* Netscape */
+  -moz-opacity: 0.7;
+  /* Safari 1.x */
+  -khtml-opacity: 0.7;
+  /* Good browsers */
+  opacity: 0.7;
+}
+
+#poweredby div {
+  position: relative;
+  width: 150px;
+  height: 25px;
+  background-image: url(images/powered-by-ext-js.png);
+  background-repeat: no-repeat;
+}
+
+/* The simple background image PNG does not work in IE6-8, but does in IE9 */
+.x-ie6 #poweredby div,
+.x-ie7 #poweredby div,
+.x-ie8 #poweredby div {
+  background-image: none;
+  filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/powered-by-ext-js.png', sizingMethod='scale');
+}
+
+/*---------------------TEST BUILD nOFAC---------------------*/
+
+.sort-desc {
+    background-image: url(images/sort_desc.gif) !important;
+    background-position: 4px 7px !important;
+}
+.sort-asc {
+    background-image: url(images/sort_asc.gif) !important;
+    background-position: 4px 7px !important;
+}
+
+/*----------------------------------------------------
+    Start Button
+*/
+.ux-start-button-icon {
+  background-image: url(images/taskbar/sencha.gif) !important;
+  background-color: transparent;
+}
+
+.ux-start-button .x-btn-arrow {
+  background-image: none;
+}
+
+.ux-start-button .x-btn-arrow-right {
+  padding-left: 10px;
+}
+
+.ux-taskbar {
+  padding-left: 4px !important;
+}
+
+/*
+    Start Button (Black)
+*/
+.ux-desktop-black .ux-start-button {
+  height: 28px;
+  padding: 0px;
+  display: block;
+}
+
+.ux-desktop-black .ux-start-button em {
+  margin-top: 5px;
+}
+
+.ux-desktop-black .ux-start-button .x-btn-inner {
+  color: black;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.ux-desktop-black .ux-start-button {
+  background-image: -moz-linear-gradient(center top, #E4F3FF, #D9EDFF 48%, #C2D8F2 52%, #C6DCF6);
+  border-radius: 8px 8px 8px 8px;
+  border-color: #81A4D0;
+}
+
+/*----------------------------------------------------
+    Start Menu
+*/
+.ux-start-menu-toolbar .x-btn-inner {
+  text-align: left;
+}
+
+.ux-start-menu-toolbar {
+  padding: 4px !important;
+}
+
+/*----------------------------------------------------
+    TaskBar
+*/
+.ux-taskbar .x-toolbar {
+  background: transparent none;
+  border-color: transparent;
+}
+
+.x-ie6 .ux-taskbar .x-toolbar {
+  border-color: #d3e1f1;
+}
+
+.ux-desktop-windowbar .x-btn-inner,
+.x-nbr .ux-desktop-windowbar .x-btn-icon-text-left button {
+  text-align: left !important;
+}
+
+.ux-taskbar .x-toolbar {
+  height: 28px;
+}
+
+.ux-taskbar {
+  height: 28px;
+  padding: 0;
+}
+
+.x-toolbar .x-toolbar {
+  padding: 0;
+}
+
+/*
+    TaskBar (Black)
+*/
+.ux-desktop-black .ux-taskbar {
+  background: transparent url('images/taskbar/black/taskbar-start-panel-bg.gif') repeat-x left top;
+  border-color: transparent;
+  /*height: 30px;*/
+}
+
+.ux-desktop-black .ux-taskbar .x-splitter {
+  background: transparent url(images/taskbar/black/taskbar-split-h.gif) no-repeat scroll 0 -2px;
+}
+
+.ux-desktop-black .ux-taskbar .x-toolbar-text {
+  color: white !important;
+}
+
+.ux-desktop-black .ux-taskbar .x-btn-default-toolbar-small-over {
+  background-color: yellow;
+}
+
+.ux-desktop-black .ux-taskbar .x-btn-inner {
+  color: white;
+}
+
+.ux-desktop-black .ux-taskbar .x-btn-pressed .x-btn-inner,.ux-taskbar .x-btn-over .x-btn-inner {
+  color: black;
+}
+
+/*----------------------------------------------------
+    Tray Clock
+*/
+.ux-desktop-trayclock {
+  text-align: center;
+  vertical-align: middle;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+/*----------------------------------------------------
+    Desktop DataView
+*/
+.ux-wallpaper {
+  background-color: #3d71b8;
+}
+
+.ux-wallpaper-tiled {
+  background-repeat: repeat;
+}
+
+.ux-desktop-shortcut {
+  cursor: pointer;
+  text-align: center;
+  padding: 0px 10px 10px 22px;
+  margin: 10px 5px 5px 0px;
+  width: 64px;
+}
+
+.ux-desktop-shortcut-icon {
+  width: 32px;
+  height: 32px;
+  background-color: transparent;
+  background-repeat: no-repeat;
+}
+
+.ux-desktop-shortcut-text {
+  font: normal 10px tahoma, arial, verdana, sans-serif;
+  text-decoration: none;
+  padding-top: 5px;
+  color: white;
+}
+
+.x-view-over .ux-desktop-shortcut-text {
+  text-decoration: underline;
+}
+
+/*----------------------------------------------------
+    Various icon classes
+*/
+.search-shortcut {
+  background-image: url(images/search-icon_16x16.png);
+  margin-left:10px;
+}
+
+.accordion-shortcut {
+  background-image: url(images/im48x48.png);
+}
+
+.cpu-shortcut {
+  background-image: url(images/statusLarge.png);
+}
+
+.grid-shortcut {
+  background-image: url(images/reference-data.png);
+}
+
+.ofac-hit {
+  background-image: url(images/ofac-hit2_32x32.png);
+}
+
+.ofac-search2 {
+  background-image: url(images/ofac-search3_32x32.png);
+}
+
+.loan-shortcut {
+  background-image: url(images/loan32x32.png);
+}
+
+.admin-shortcut {
+  background-image: url(images/im32x32.png);
+}
+
+.notepad-shortcut {
+  background-image: url(images/notepadLarge.png);
+  width: 46px;
+  height: 46px;
+}
+
+.x-ie6 .accordion-shortcut {
+  background-image: none;
+  filter: progid : DXImageTransform.Microsoft.AlphaImageLoader ( src = 'images/im48x48.png', sizingMethod = 'scale' );
+}
+
+.x-ie6 .cpu-shortcut {
+  background-image: none;
+  filter: progid : DXImageTransform.Microsoft.AlphaImageLoader ( src = 'images/statusLarge.png', sizingMethod = 'scale' );
+}
+
+.x-ie6 .grid-shortcut {
+  background-image: none;
+  filter: progid : DXImageTransform.Microsoft.AlphaImageLoader ( src = 'images/grid48x48.png', sizingMethod = 'scale' );
+}
+
+.x-ie6 .notepad-shortcut {
+  background-image: none;
+  filter: progid : DXImageTransform.Microsoft.AlphaImageLoader ( src = 'images/notepadLarge.png', sizingMethod = 'scale' );
+}
+
+.video {
+  background-image: url(images/gears.gif);
+}
+
+.bogus {
+  background-image: url(images/bogus.png ) !important;
+}
+
+.notepad {
+  background-image: url(images/bogus.png ) !important;
+}
+
+.logout {
+  background-image: url(images/logout.gif ) !important;
+}
+
+.settings {
+  background-image: url(images/gears.gif ) !important;
+}
+
+.icon-grid {
+  background-image: url(images/grid.png ) !important;
+}
+
+.add {
+  background-image: url(shared/icons/fam/add.gif) !important;
+}
+
+.option {
+  background-image: url(shared/icons/fam/plugin.gif) !important;
+}
+
+.remove {
+  background-image: url(shared/icons/fam/delete.gif) !important;
+}
+
+.save {
+  background-image: url(shared/icons/save.gif) !important;
+}
+
+.accordion {
+  background-image: url(images/accordian.gif) !important;
+}
+
+.tabs {
+  background-image: url(images/tabs.gif) !important;
+}
+
+/*----------------------------------------------------
+    IM window icons
+*/
+.user {
+  background-image: url( shared/icons/fam/user.gif ) !important;
+}
+
+.user-add {
+  background-image: url(shared/icons/fam/user_add.gif) !important;
+}
+
+.user-delete {
+  background-image: url(shared/icons/fam/user_delete.gif) !important;
+}
+
+.connect {
+  background-image: url(shared/icons/fam/connect.gif) !important;
+}
+
+.user-girl {
+  background-image: url(shared/icons/fam/user_female.gif) !important;
+}
+
+.user-kid {
+  background-image: url(shared/icons/fam/user_green.gif) !important;
+}
+
+.user-suit {
+  background-image: url(shared/icons/fam/user_suit.gif) !important;
+}
+
+.search-icon {
+  background-image: url(images/search_button.png);
+  margin-left: 20px;
+}
+
+.new-icon {
+  background-image: url(images/new_button.png);
+  margin-left: 20px;
+}
+
+.new-icon2 {
+  background-image: url(images/new_button.png);
+}
+
+.pdf-icon {
+  background-image: url(images/pdf-icon.png);
+}
+
+.submit-icon {
+  background-image: url(images/submit_button.png);
+}
+
+.update-icon {
+  background-image: url(images/t_update_button.png);
+}
+
+.save-icon {
+  background-image: url(images/save_button.png);
+}
+
+.cancel-icon {
+  background-image: url(images/cancel_button.png);
+}
+
+.approve-icon {
+  background-image: url(images/approve_button.png);
+}
+
+.reject-icon {
+  background-image: url(images/reject_button.gif);
+}
+
+.icon-clear-group {
+  background-image: url(images/control_rewind.png);
+}
+
+.icon-detach {
+  background-image: url(images/detach_button.gif);
+}
+
+.icon-file {
+  background-image: url(images/file-icon.png);
+}
+
+.icon-edit {
+  background-image: url(images/edit-icon.png);
+}
+
+.icon-view {
+  background-image: url(images/view-icon.png);
+}
+
+.icon-help {
+  background-image: url(images/help-icon.png);
+}
+
+.icon-loan {
+  background-image: url(images/loan.png);
+}
+
+.icon-lock {
+  background-image: url(images/icon_padlock.png);
+}
+
+.icon-login-cancel {
+  background-image: url(images/login-cancel.png);
+}
+
+.icon-file-upload {
+  background-image: url(images/file-upload.png);
+}
+
+.icon-business-entity {
+  background-image: url(images/business-entity.png);
+}
+
+.icon-contact {
+  background-image: url(images/contact.png);
+}
+
+.icon-contact-white {
+  background-image: url(images/contact_white.png);
+}
+
+.icon-valuable {
+  background-image: url(images/valuable.png);
+}
+
+.icon-ssi {
+  background-image: url(images/ssi.png);
+}
+
+.icon-bank-ac {
+  background-image: url(images/back-account.png);
+}
+
+.icon-ref-legal-entity {
+  background-image: url(images/ref-legal-entity.png);
+}
+
+.icon-compare {
+  background-image: url(images/compare-icon.png);
+}
+
+.icon-folder2 {
+  background-image: url(images/folder-open2.gif);
+}
+
+.icon-tab {
+  background-image: url(images/tab-icon.png);
+}
+
+.icon-window {
+  background-image: url(images/window-icon.png);
+}
+
+.icon-new-app {
+  background-image: url(images/new-app-icon.png);
+}
+
+.icon-undo {
+  background-image: url(images/undo-icon.png);
+}
+
+.icon-approve {
+  background-image: url(images/approve_button.png);
+}
+
+.icon-reset {
+  background-image: url(images/reset-button.png);
+}
+
+.icon-save {
+  background-image: url(images/save-button.png);
+}
+
+.icon-refresh {
+  background-image: url(images/refresh-icon.png);
+}
+
+.icon-user-group {
+  background-image: url(images/user-group.png);
+}
+
+.icon-user-account {
+  background-image: url(images/user-account.png);
+}
+
+.icon-user-role {
+  background-image: url(images/user-role.png);
+}
+
+.icon-main-grid {
+  background-image: url(images/main-grid.png);
+}
+
+.icon-loan-grid {
+  background-image: url(images/loan-grid.png);
+}
+
+.icon-admin-grid {
+  background-image: url(images/admin-grid.gif);
+}
+
+.payment-shortcut {
+  background-image: url(images/payment.png);
+}
+
+.dashboard-shortcut {
+  background-image: url(images/Daxia_Dashboard.png);
+}
+.dashboard-icon-sm {
+  background-image: url(images/Daxia_Dashboard_sm.png);
+}
+
+.calendar-shortcut {
+  background-image: url(images/calendar.png);
+}
+
+.reports-shortcut {
+  background-image: url(images/reports.png);
+}
+.reports-icon_sm {
+  background-image: url(images/reports_sm.png);
+}
+.daily_transactions{
+  background-image: url(images/daily_transactions.png);
+}
+.daily_transactions_sm{
+  background-image: url(images/daily_transactions_sm.png);
+}
+.actual_payment{
+  background-image: url(images/actual_payment.png);
+}
+.expected_payment{
+  background-image: url(images/expected-payment.png);
+}
+.matched_payment{
+  background-image: url(images/matched_payment.png);
+}
+.unmatched_payment{
+  background-image: url(images/unmatch_payment.png);
+}
+.view-icon{
+  background-image: url(images/view.png);
+  margin-left: 20px;
+}
+.payment-processing_sm{
+  background-image: url(images/payment-processing_sm.png);
+}
+
+.bsa-icon{
+  background-image: url(images/bsa-icon.gif);
+}
+.valuable-icon{
+  background-image: url(images/valuable-icon.gif);
+}
+.icon-p{
+  background-image: url(images/p-icon.png);
+}
+.icon-j{
+  background-image: url(images/j-icon.png);
+}
+.icon-d{
+  background-image: url(images/d-icon.png);
+}
+.export-icon{
+  background-image: url(images/export_excel.png);
+}
+.overrite-icon{
+  background-image: url(images/matched-icon.png);
+}
+.block-icon{
+  background-image: url(images/alert.png);
+}
+.legal-entity-icon{
+  background-image: url(images/Legal_Entity.png);
+}
+
+
+.valid-text {
+
+}
+
+.valid-text input {
+  color: #781351 !important;
+  background: #fee3ad !important;
+  border: 1px solid #781351 !important
+}
+
+.valid-text textarea {
+  color: #781351 !important;
+  background: #fee3ad !important;
+  border: 1px solid #781351 !important
+}
+
+.exttabs .modulecontent {
+  background-color: blue;
+}
+
+.red-row {
+  color: #ff0000;
+  background: #fee3ad;
+  font-weight: bold;
+}
+.default-row .x-grid-cell-inner{
+  color: #000000;
+  font-weight: bold !important;
+  }
+.black-row .x-grid-cell-inner{
+  color:#000000;
+  font-weight: bold !important;
+}
+
+.greyField input,.greyField textarea {
+  border: 1px solid #666;
+  background: #e9e4e4;
+  opacity: 1.0 !important;
+}
+
+.mandetoryField input,.mandetoryField textarea {
+  border: 1px solid #666;
+  background: #ffe6e6;
+  opacity: 1.0 !important;
+}
+.x-item-disabled {
+    opacity: 1.0 !important;
+}
+
+.opacityFull {
+  opacity: 1.0 !important;
+}
+
+.x-grid .x-mask {
+  opacity: 0 !important;
+}
+
+.opacityFull.x-panel .x-grid-body {
+  background: #e9e4e4 !important;
+}
+
+.opacityFull .x-grid-row .x-grid-cell {
+  background: none !important;
+}
+
+.editorBGHide textarea {
+  background: none !important;
+}
+
+.opacityFullFieldset {
+  opacity: 1.0 !important;
+}
+
+.x-fieldset .x-item-disabled {
+  opacity: 1.0 !important;
+}
+
+
+.x-grid-row ,.x-grid-cell, .x-unselectable, .x-unselectable * {
+
+ -webkit-user-select: text !important;
+
+ -o-user-select: text !important;
+
+ -khtml-user-select: all !important;
+
+ -ms-user-select: text !important;
+
+ user-select: text !important;
+
+ -moz-user-select: text !important;
+
+}
+#searchUserOFACFormContainer .x-panel-body-default{background: #DFE9F6 !important;}
+.x-form-text, textarea.x-form-field {
+    -moz-box-shadow: #e4e4e4 4px 5px 10px inset;
+    -webkit-box-shadow: #e4e4e4 4px 5px 10px inset;
+    -o-box-shadow: #e4e4e4 4px 5px 10px inset;
+    border: 1px solid #dadada;
+    box-shadow: #e4e4e4 4px 5px 10px inset;
+    border: 1px solid #B5B8C8;
+    padding: 1px 3px;
+}
+
+#OFACSwiftEntityHitForm .x-panel-body-default{background: none repeat scroll 0 0 #e9f3fe !important;}
+ #swiftFormMainContent .x-panel-body-default {background-color:#e9f3fe !important;}
+#searchUserOFACEntryPropContainer-innerCt{height: 60px !important;}
+
+.mandatory-fieldset {
+  background: #F1F3FB,
+  border: 1px solid red
+}
+.mandatory-fieldset .x-fieldset-header {
+  color: red
+}
+
+.message-grid .x-grid-row  .x-grid-cell {
+    /*background-color:rgba(246, 247, 255, 0.77); */
+    font: normal 12px/15px curier new,curier new,verdana,sans-serif;
+   /* border-bottom-color: #fffff0;
+    border-top-color: #ffffff;
+    border-style: solid !important;
+    height: 30px;
+    color: #000000;*/
+}
+
+.hit .x-grid-cell {
+   background: #ffe2e2!important;
+   color: #900;
+}
+#OFACKycEntityHitForm .x-panel-body-default{background: #DFE9F6 !important;}
+.x-form-text, textarea.x-form-field {
+    -moz-box-shadow: #e4e4e4 4px 5px 10px inset;
+    -webkit-box-shadow: #e4e4e4 4px 5px 10px inset;
+    -o-box-shadow: #e4e4e4 4px 5px 10px inset;
+    border: 1px solid #dadada;
+    box-shadow: #e4e4e4 4px 5px 10px inset;
+    border: 1px solid #B5B8C8;
+    padding: 1px 3px;
+}
+.hitField input {
+  background: #ffe2e2!important;
+  background-color:#FFFFCC;
+   color: #900;
+}
+
+/*-----------------------TEST BUILD END-----------------------*/
+
+/*----------------------------------------------------
+    Start Button
+*/
+
+.ux-start-button-icon {
+  background-image: url(images/taskbar/sencha.gif) !important;
+  background-color: transparent;
+}
+
+.ux-start-button .x-btn-arrow {
+  background-image: none;
+}
+
+.ux-taskbar {
+  padding-left: 4px !important;
+}
+
+/*
+    Start Button (Black)
+*/
+
+.ux-desktop-black .ux-start-button {
+  height: 28px;
+  padding: 0px;
+  display: block;
+}
+
+.ux-desktop-black .ux-start-button em {
+  margin-top: 5px;
+}
+
+.ux-desktop-black .ux-start-button .x-btn-inner {
+  color: black;
+  font-size:11px;
+  font-weight: bold;
+}
+
+.ux-desktop-black .ux-start-button {
+  background-image: -moz-linear-gradient(center top , #E4F3FF, #D9EDFF 48%, #C2D8F2 52%, #C6DCF6);
+  border-radius: 8px 8px 8px 8px;
+  border-color: #81A4D0;
+}
+
+/*----------------------------------------------------
+    Start Menu
+*/
+
+.ux-start-menu-toolbar .x-btn-inner {
+  text-align: left;
+}
+
+.ux-start-menu-toolbar {
+  padding: 4px !important;
+}
+
+/*----------------------------------------------------
+    TaskBar
+*/
+
+/* Use high specificity selector to override default styling*/
+div.ux-taskbar div.x-toolbar {
+  background: transparent none;
+  border: 0 none;
+  padding: 0;
+}
+
+.ux-desktop-windowbar .x-btn-inner,
+.x-nbr .ux-desktop-windowbar .x-btn-icon-text-left button {
+  text-align: left !important;
+}
+
+/*
+    TaskBar (Black)
+*/
+
+.ux-desktop-black .ux-taskbar {
+  background: transparent url('images/taskbar/black/taskbar-start-panel-bg.gif') repeat-x left top;
+  border-color: transparent;
+  /*height: 30px;*/
+}
+
+.ux-desktop-black .ux-taskbar .x-splitter {
+  background: transparent url(images/taskbar/black/taskbar-split-h.gif) no-repeat scroll 0 -2px;
+}
+
+.ux-desktop-black .ux-taskbar .x-toolbar-text {
+  color: white !important;
+}
+
+.ux-desktop-black .ux-taskbar .x-btn-default-toolbar-small-over {
+  background-color: yellow;
+}
+
+.ux-desktop-black .ux-taskbar .x-btn-inner {
+  color: white;
+}
+
+.ux-desktop-black .ux-taskbar .x-btn-pressed .x-btn-inner, .ux-taskbar .x-btn-over .x-btn-inner {
+  color: black;
+}
+
+/*----------------------------------------------------
+    Tray Clock
+*/
+
+.ux-desktop-trayclock {
+  text-align: center;
+  vertical-align: middle;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+/*----------------------------------------------------
+    Desktop DataView
+*/
+
+.ux-wallpaper {
+  background-color: #3d71b8;
+}
+
+.ux-wallpaper-tiled {
+  background-repeat: repeat;
+}
+
+.ux-desktop-shortcut {
+  cursor: pointer;
+  text-align: center;
+  padding: 0px 10px 10px 22px;
+  margin: 10px 5px 5px 0px;
+  width: 64px;
+}
+
+.ux-desktop-shortcut-icon {
+  width: 32px;
+  height: 32px;
+  background-color: transparent;
+  background-repeat: no-repeat;
+}
+
+.ux-desktop-shortcut-text {
+  font: normal 10px tahoma,arial,verdana,sans-serif;
+  text-decoration: none;
+  padding-top: 5px;
+  color: white;
+}
+
+.x-view-over .ux-desktop-shortcut-text {
+  text-decoration: underline;
+}
+
+
+/*----------------------------------------------------
+    Various icon classes
+*/
+
+.accordion-shortcut {
+  background-image: url(images/im48x48.png);
+}
+
+.cpu-shortcut {
+  background-image: url(images/statusLarge.png);
+}
+
+.grid-shortcut {
+  background-image: url(images/grid_32x32.png);
+}
+
+.grid-upload {
+  background-image: url(images/upload-icon_32x32.png);
+}
+
+.notepad-shortcut {
+  background-image: url(images/notepadLarge.png);
+  width: 46px;
+  height: 46px;
+}
+
+.x-ie6 .accordion-shortcut {
+  background-image: none;
+  filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/im48x48.png', sizingMethod='scale');
+}
+
+.x-ie6 .cpu-shortcut {
+  background-image: none;
+  filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/statusLarge.png', sizingMethod='scale');
+}
+
+.x-ie6 .grid-shortcut {
+  background-image: none;
+  filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/grid48x48.png', sizingMethod='scale');
+}
+
+.x-ie6 .notepad-shortcut {
+  background-image: none;
+  filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/notepadLarge.png', sizingMethod='scale');
+}
+
+.video {
+  background-image: url(images/gears.gif);
+}
+
+.bogus {
+  background-image: url(images/bogus.png ) !important;
+}
+
+.notepad {
+  background-image: url(images/bogus.png ) !important;
+}
+
+.logout {
+  background-image: url(images/logout.gif ) !important;
+}
+
+.settings {
+  background-image: url(images/gears.gif ) !important;
+}
+
+.icon-grid {
+  background-image:url(images/grid.png ) !important;
+}
+
+.kyc-shortcut {
+  background-image:url(images/ofac-search2_32x32.png) !important;
+}
+
+.nofac-shortcut {
+  background-image:url(images/ofac-search3_32x32.png);
+}
+
+.remittance-shortcut {
+  background-image:url(images/remittance_32x32.png) !important;
+}
+
+.kyc-grid {
+  background-image:url(images/user-account.png) !important;
+}
+
+.icon-loan-grid {
+  background-image: url(images/loan-grid.png);
+}
+
+.icon-admin-grid {
+  background-image: url(images/admin-grid.gif);
+}
+
+.loan-shortcut {
+  background-image: url(images/loan32x32.png);
+}
+
+.admin-shortcut {
+  background-image: url(images/im32x32.png);
+}
+
+.swift-shortcut {
+  background-image: url(images/ofac-hit2_32x32.png);
+}
+
+.mt-shortcut {
+  background-image: url(images/payment.png) !important;
+}
+
+.add {
+  background-image:url(shared/icons/fam/add.gif) !important;
+}
+
+.option {
+  background-image:url(shared/icons/fam/plugin.gif) !important;
+}
+
+.remove {
+  background-image:url(shared/icons/fam/delete.gif) !important;
+}
+
+.save {
+  background-image:url(shared/icons/save.gif) !important;
+}
+
+.accordion {
+  background-image:url(images/accordian.gif) !important;
+}
+
+.tabs {
+  background-image:url(images/tabs.gif) !important;
+}
+
+
+/*----------------------------------------------------
+  Buttons Icons
+/*
+
+.submit-icon {
+  background-image: url(images/submit_button.png);
+}
+
+.search-icon {
+  background-image: url(images/search_button.png);
+  margin-left: 20px;
+}
+
+.new-icon {
+  background-image: url(images/new_button.png);
+  margin-left: 20px;
+}
+
+.new-icon2 {
+  background-image: url(images/new_button.png);
+}
+
+.pdf-icon {
+  background-image: url(images/pdf-icon.png);
+}
+
+.submit-icon {
+  background-image: url(images/submit_button.png);
+}
+
+.update-icon {
+  background-image: url(images/t_update_button.png);
+}
+
+.save-icon {
+  background-image: url(images/save_button.png);
+}
+
+.cancel-icon {
+  background-image: url(images/cancel_button.png);
+}
+
+.approve-icon {
+  background-image: url(images/approve_button.png) !important;
+}
+
+.reject-icon {
+  background-image: url(images/reject_button.gif);
+}
+
+.icon-clear-group {
+  background-image: url(images/control_rewind.png);
+}
+
+.icon-detach {
+  background-image: url(images/detach_button.gif);
+}
+
+.icon-file {
+  background-image: url(images/file-icon.png);
+}
+
+.icon-edit {
+  background-image: url(images/edit-icon.png);
+}
+
+.icon-view {
+  background-image: url(images/view-icon.png);
+}
+
+.icon-help {
+  background-image: url(images/help-icon.png);
+}
+
+.icon-loan {
+  background-image: url(images/loan.png);
+}
+
+.icon-lock {
+  background-image: url(images/icon_padlock.png);
+}
+
+.icon-login-cancel {
+  background-image: url(images/login-cancel.png);
+}
+
+.icon-file-upload {
+  background-image: url(images/file-upload.png);
+}
+
+.icon-business-entity {
+  background-image: url(images/business-entity.png);
+}
+
+.icon-contact {
+  background-image: url(images/contact.png);
+}
+
+.icon-contact-white {
+  background-image: url(images/contact_white.png);
+}
+
+.icon-valuable {
+  background-image: url(images/valuable.png);
+}
+
+.icon-ssi {
+  background-image: url(images/ssi.png) !important;
+}
+
+.icon-bank-ac {
+  background-image: url(images/back-account.png);
+}
+
+.icon-ref-legal-entity {
+  background-image: url(images/ref-legal-entity.png);
+}
+
+.icon-compare {
+  background-image: url(images/compare-icon.png);
+}
+
+.icon-folder2 {
+  background-image: url(images/folder-open2.gif);
+}
+
+.icon-tab {
+  background-image: url(images/tab-icon.png);
+}
+
+.icon-window {
+  background-image: url(images/window-icon.png);
+}
+
+.icon-new-app {
+  background-image: url(images/new-app-icon.png);
+}
+
+.icon-undo {
+  background-image: url(images/undo-icon.png);
+}
+
+.icon-approve {
+  background-image: url(images/approve_button.png);
+}
+
+.icon-reset {
+  background-image: url(images/reset-button.png);
+}
+
+.icon-save {
+  background-image: url(images/save-button.png);
+}
+
+.icon-refresh {
+  background-image: url(images/refresh-icon.png);
+}
+
+.icon-user-group {
+  background-image: url(images/user-group.png);
+}
+
+.icon-user-account {
+  background-image: url(images/user-account.png);
+}
+
+
+
+/*----------------------------------------------------
+    IM window icons
+*/
+
+.user {
+  background-image:url(shared/icons/fam/user.gif ) !important;
+}
+
+.user-add {
+  background-image:url(shared/icons/fam/user_add.gif) !important;
+}
+
+.user-delete {
+  background-image:url(shared/icons/fam/user_delete.gif) !important;
+}
+
+.connect {
+  background-image:url(shared/icons/fam/connect.gif) !important;
+}
+
+.user-girl {
+  background-image:url(shared/icons/fam/user_female.gif) !important;
+}
+
+.user-kid {
+  background-image:url(shared/icons/fam/user_green.gif) !important;
+}
+
+.user-suit {
+  background-image:url(shared/icons/fam/user_suit.gif) !important;
+}
+
+.export-icon{
+  background-image: url(shared/icons/fam/export_excel.png) !important;
+}
+
+.export-icon_red{
+  background-image: url(shared/icons/fam/export_excel_red.png) !important;
+}
+
+/*--------------------------------------------------------
+    nOFAC Icons
+*/
+
+.icon-lock {
+  background-image: url(images/icon_padlock.png);
+}
+
+/*--------------------------------------------------------
+    nOFAC custom css
+*/
+
+.x-form-text { display: inline; }
+
+.hit {
+   background: #ffe2e2!important;
+   color: #900;
+}
+
+.not-hit {
+ background-color: white !important;
+}
+
+.icon-email {
+ background-image: url(images/email.png);
+}
+
+.reconciliation-shortcut {
+  background-image: url(images/reconciliation-shortcut.png);
+}
+
+.bgcolor-nostro-result-incorrect{
+ color :  #ff3333 !important;
+}
+
+.bgcolor-nostro-result-correct{
+ color : #40bf80 !important;
+}
+
+.color-yellow{
+ color : yellow;
+}
+
+.color-manual-mathced{
+ color : #66b3ff;
+}

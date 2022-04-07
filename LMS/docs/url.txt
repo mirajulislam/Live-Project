@@ -1,0 +1,64 @@
+https://finuat-j2ee.cbbl.com:20443/FISERVLET/fihttp
+http://10.71.16.13:80/IOFFFICE-API/?CIF_ID=0179873
+
+     http://10.71.14.26/RETCUSTINQ/
+
+
+https://finuat-j2ee.cbbl.com:20443/FISERVLET/fihttp
+http://10.71.16.13:80/IOFFFICE-API/?
+
+
+http://localhost:8083/refresh/preference
+http://localhost:8083/Lms-server/refresh/preference
+http://localhost:8083/refresh/configuration
+http://localhost:8083/Lms-server/refresh/configuration
+
+
+Customer Information Details with 7 Digit Customer ID
+
+ 
+
+AC Number Format [3 Digit Branch Code] [7 Digit CIF/Customer ID] [1 Digit Scheme Type] [2 Digit Sequence]
+
+Sample AC: 0010300044201 
+03000442
+
+ Caused by: java.lang.ClassNotFoundException: com.sun.xml.internal.bind.v2.ContextFactory
+
+
+
+WORKING URL: http://10.71.16.10:801/IOFFFICE-API/?NID=4617789703374
+
+http://10.71.16.10:801/IOFFFICE-API/?PHONE=01735993796
+
+ http://10.110.1.111:8080/LMS/
+2020-01-08 16:19:20,055 INFO c.n.l.u.RequestSender [http-apr-8080-exec-7] Sending request to [http://localhost:8084/finacle/customer]
+
+
+PARAMETER:     ANY ONE OF THE BELOW MENTIONED
+
+                                NID
+
+                                AC
+
+                           CIF_ID
+
+                                PHONE
+                <custId>0001357</custId>
+
+
+N@Tech#CBBL
+ 
+10001357201
+A/C	Name	BP
+0010300044201	MD. SHAMS  UDDIN	BP8202096238
+0010001357201	MD. SHAMS  UDDIN	BP8202096238
+
+
+
+0010001358201	MD. IKBAL HOSSEN	BP8707117933
+0010001359201	ASHIM  BAISHNAB	BP9615174084
+0010001360201	KHADIZA AKTER	BP9110125186
+0010001361201	MD AMINUL ISLAM	BP8606109221
+0010001362201	MIJANUR  RAHMAN	BP9616185804
+0010001363201	HAZARAT  ALI	BP9111129744

@@ -1,0 +1,46 @@
+Ext.define('Desktop.model.AcquisitionDetailsConfig', {
+	extend: 'Desktop.model.AcquisitionBase',
+
+	requires: [
+		'Ext.data.field.Field'
+	],
+
+	fields	: [
+		{nane :  'acquisitionDetailsConfigId'		, type: 'int'},
+		{nane :  'acquisitionDetailsConfigVer'		, type: 'int'},
+		{nane :  'idAcquisitionApplicantKey'		, type: 'int'},
+		{nane :  'organizationName'					, type: 'string'},
+		{nane :  'designation'						, type: 'string'},
+		{nane :  'serviceLength'					, type: 'number'},
+		{nane :  'otherBankLiabilityPosition'		, type: 'string'},
+		{nane :  'loanType'							, type: 'string'},
+		{nane :  'financialInstitutionName'			, type: 'string'},
+		{nane :  'loanACnoOrCardNo'					, type: 'string'},
+		{nane :  'sanctionLimit'					, type: 'number'},
+		{nane :  'validity'							, type: 'string'},
+		{nane :  'presentOutstanding'				, type: 'number'},
+		{nane :  'emi'								, type: 'number'},
+		{nane :  'otherBankAccDetails'				, type: 'string'},
+		{nane :  'accountTitle'						, type: 'string'},
+		{nane :  'branchName'						, type: 'string'},
+		{nane :  'accountNo'						, type: 'string'},
+		{nane :  'securityType'						, type: 'string'},
+		{nane :  'beneficiary'						, type: 'string'},
+		{nane :  'rate'								, type: 'number'},
+		{nane :  'aCInstrumentNo'					, type: 'string'},
+		{nane :  'bankName'							, type: 'string'},
+		{nane :  'issueDate'						, type: 'date'},
+		{nane :  'faceValue'						, type: 'string'},
+		{nane :  'presentValue'						, type: 'string'},
+		{nane :  'companyName'						, type: 'string'},
+		{nane :  'mainAddress'						, type: 'string'},
+		{nane :  'additionalAddress'				, type: 'string'},
+		{nane :  'availingAnyLoanThisCompany'		, type: 'string'},
+		{nane :  'nameOfCompanyBank'				, type: 'string'},
+		{nane :  'branchOfCompanyBank'				, type: 'string'},
+		{nane :  'objectType'						, type: 'string'},
+		{nane :  'inputedBy'						, type: 'string'},
+		{nane :  'group'							, type: 'string'},
+		{nane :  'subGroup'							, type: 'string'},		
+	]
+});

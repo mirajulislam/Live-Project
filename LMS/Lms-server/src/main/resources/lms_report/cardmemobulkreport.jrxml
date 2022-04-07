@@ -1,0 +1,1057 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.17.0.final using JasperReports Library version 6.17.0-6d93193241dd8cc42629e188b94f9e0bc5722efd  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_A4_Landscape" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" isSummaryWithPageHeaderAndFooter="true" uuid="2a291a7c-e9bf-4c2b-90e1-7944188ebce9">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<style name="Table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 1_TH" mode="Opaque" backcolor="#DEDEDE">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 1_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="DATASET_MEMO_DETAIL" uuid="98e27be4-3b58-4cb5-b4fc-231fff79f1d2">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+		<field name="tx_rs_type" class="java.lang.String"/>
+		<field name="tx_customer_name" class="java.lang.String"/>
+		<field name="tx_bp_no" class="java.lang.String"/>
+		<field name="tx_designation" class="java.lang.String"/>
+		<field name="dec_approved_limit" class="java.lang.Double"/>
+		<field name="dec_3_percent_of_approve_limit" class="java.lang.Double"/>
+		<field name="dec_salary_deposited_last_month" class="java.lang.Double"/>
+		<field name="dec_cbbl_emi" class="java.lang.Double"/>
+		<field name="dec_remaining_emi" class="java.lang.Double"/>
+		<field name="dt_cib_generation" class="java.sql.Timestamp"/>
+		<field name="tx_cib_status" class="java.lang.String"/>
+		<field name="tx_card_type" class="java.lang.String"/>
+	</subDataset>
+	<parameter name="ds_card_view_memo" class="net.sf.jasperreports.engine.JRResultSetDataSource"/>
+	<parameter name="p_card_group_id" class="java.lang.String"/>
+	<parameter name="p_approved_memo_ref" class="java.lang.String"/>
+	<parameter name="p_prepared_by_name" class="java.lang.String"/>
+	<parameter name="p_prepared_by_designation" class="java.lang.String"/>
+	<parameter name="p_recommended_1_by_name" class="java.lang.String"/>
+	<parameter name="p_recommended_1_by_designation" class="java.lang.String"/>
+	<parameter name="p_recommended_2_by_name" class="java.lang.String"/>
+	<parameter name="p_recommended_2_by_designation" class="java.lang.String"/>
+	<parameter name="p_recommended_3_by_name" class="java.lang.String"/>
+	<parameter name="p_recommended_3_by_designation" class="java.lang.String"/>
+	<parameter name="p_recommended_4_by_name" class="java.lang.String"/>
+	<parameter name="p_recommended_4_by_designation" class="java.lang.String"/>
+	<parameter name="p_recommended_5_by_name" class="java.lang.String"/>
+	<parameter name="p_recommended_5_by_designation" class="java.lang.String"/>
+	<parameter name="p_recommended_6_by_name" class="java.lang.String"/>
+	<parameter name="p_recommended_6_by_designation" class="java.lang.String"/>
+	<parameter name="p_approved_by_name" class="java.lang.String"/>
+	<parameter name="p_approved_by_designation" class="java.lang.String"/>
+	<field name="tx_rs_type" class="java.lang.String"/>
+	<field name="count_police_file" class="java.lang.Integer"/>
+	<field name="count_staff_file" class="java.lang.Integer"/>
+	<field name="count_total_file" class="java.lang.Integer"/>
+	<field name="total_approved_limit_police" class="java.lang.Double"/>
+	<field name="total_approved_limit_staff" class="java.lang.Double"/>
+	<field name="total_approved_limit" class="java.lang.Double"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="40" splitType="Stretch">
+			<textField>
+				<reportElement x="20" y="10" width="140" height="11" uuid="c10e3801-23e1-4ce4-b7dc-041f36bd6b05"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA["MEMO Date: " + new SimpleDateFormat("dd MMM yyyy").format(new java.util.Date())]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="580" y="10" width="200" height="11" uuid="4fe2bacb-3512-4f8f-bcda-fc47e91dd816">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Credit Card approval MEMO " + $P{p_card_group_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="640" y="29" width="140" height="11" uuid="dce44eb2-3e1b-4db8-93be-15fb02ffd857">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Date " +new SimpleDateFormat("dd-MMM-yyyy").format(new java.util.Date())]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="150" splitType="Stretch">
+			<staticText>
+				<reportElement x="20" y="10" width="40" height="11" uuid="bb4ba5cd-498e-4dff-b4e0-dabe8e856cf7">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Dear Sir,]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="20" y="29" width="690" height="31" uuid="eeb5d80b-ff8a-49ee-abcc-d4d41de00a0c">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Please be informed that, as per approved MEMO ref: "+$P{p_approved_memo_ref} +", following listed applicants Credit Card applications are processing for card personalization as limit assigned in MEMO. We have checked credit parameters, policies and BB compliance."]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="20" y="61" width="259" height="11" uuid="81b821f9-3e55-4759-b67e-f41ee3f920f6"/>
+				<textElement>
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[As per pre-approved limit following lists are submit for your kind review.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="36" y="78" width="84" height="11" uuid="efca697b-2317-45b9-992e-5d1cac77a3ec">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box leftPadding="3">
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+				</box>
+				<textElement>
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[Police Files]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="36" y="89" width="84" height="11" uuid="20f28a2a-5bb0-424d-a5df-0304c747b69d">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box leftPadding="3">
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+				</box>
+				<textElement>
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[Staff Files]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="36" y="100" width="84" height="11" uuid="6c3494be-2ec1-4e32-8464-6ea9476f35e5"/>
+				<box leftPadding="3">
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+				</box>
+				<textElement>
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[Total Number of Files]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="120" y="78" width="50" height="11" uuid="30fb5cf7-074e-483b-8f5b-a21e7e050fff"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{count_police_file}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="120" y="100" width="50" height="11" uuid="4ff2d2ba-4170-47b4-825c-0c25a0e9741a">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{count_total_file}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="120" y="89" width="50" height="11" uuid="0cff0082-964d-4cc6-b444-55a57aaaa0c4"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{count_staff_file}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="170" y="78" width="84" height="11" uuid="e72eb4ba-f759-4a34-a934-c85c8677a868">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box leftPadding="3">
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+				</box>
+				<textElement>
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[Amount]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="170" y="89" width="84" height="11" uuid="0f087f2e-c92e-4d38-a675-456ef2b233ab">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box leftPadding="3">
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+				</box>
+				<textElement>
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[Amount]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="170" y="100" width="84" height="11" uuid="a91b5516-b5e7-448f-9661-f8729a3673d5"/>
+				<box leftPadding="3">
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+				</box>
+				<textElement>
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[Amount]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="254" y="78" width="50" height="11" uuid="a4816841-473f-49b0-ad39-5585d17d370c"/>
+				<box rightPadding="2">
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Right">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{total_approved_limit_police} == null || Double.compare($F{total_approved_limit_police} , new Double(-2147483648)) == 0 ? "-" : new DecimalFormat("#,###").format($F{total_approved_limit_police})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="254" y="100" width="50" height="11" uuid="949fdbe4-c692-4df8-9ca9-2d32713b18de">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="2">
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Right">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{total_approved_limit} == null || Double.compare($F{total_approved_limit} , new Double(-2147483648)) == 0 ? "-" : new DecimalFormat("#,###").format($F{total_approved_limit})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="254" y="89" width="50" height="11" uuid="3cc73810-d53a-4913-8ee8-372363d9aadb"/>
+				<box rightPadding="2">
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Right">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{total_approved_limit_staff} == null || Double.compare($F{total_approved_limit_staff} , new Double(-2147483648)) == 0 ? "-" : new DecimalFormat("#,###").format($F{total_approved_limit_staff})]]></textFieldExpression>
+			</textField>
+			<componentElement>
+				<reportElement x="20" y="120" width="760" height="30" uuid="43915f21-859e-414d-8045-9fb8ecf2fd4e">
+					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+					<property name="com.jaspersoft.studio.table.style.table_header" value="Table 1_TH"/>
+					<property name="com.jaspersoft.studio.table.style.column_header" value="Table 1_CH"/>
+					<property name="com.jaspersoft.studio.table.style.detail" value="Table 1_TD"/>
+				</reportElement>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="DATASET_MEMO_DETAIL" uuid="b07d8382-9338-4276-b4f5-f637e38911d1">
+						<dataSourceExpression><![CDATA[$P{ds_card_view_memo}]]></dataSourceExpression>
+					</datasetRun>
+					<jr:column width="30" uuid="1abd10ba-e7bc-468e-8a31-881e98148e77">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column1"/>
+						<jr:tableHeader style="Table 1_TH" height="15" rowSpan="1">
+							<staticText>
+								<reportElement mode="Opaque" x="0" y="0" width="30" height="15" backcolor="#FCAB53" uuid="edfdfebb-836a-46ff-a964-48a42431a690">
+									<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+								</reportElement>
+								<box leftPadding="2" rightPadding="2">
+									<topPen lineWidth="0.25"/>
+									<leftPen lineWidth="0.25"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8" isBold="true"/>
+								</textElement>
+								<text><![CDATA[S/L]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="Table 1_TD" height="14">
+							<textField>
+								<reportElement x="0" y="0" width="30" height="14" uuid="b192fe06-97c7-4555-8690-6ae4518eaa62"/>
+								<box leftPadding="2" rightPadding="2">
+									<topPen lineWidth="0.25"/>
+									<leftPen lineWidth="0.25"/>
+									<bottomPen lineWidth="0.25"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$V{REPORT_COUNT}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="110" uuid="3e2471c2-700a-48dc-8bfd-497e512cb4f6">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column2"/>
+						<jr:tableHeader style="Table 1_TH" height="15" rowSpan="1">
+							<staticText>
+								<reportElement mode="Opaque" x="0" y="0" width="110" height="15" backcolor="#FCAB53" uuid="82f49f66-ed83-4de7-b5b8-31664b98fe5b"/>
+								<box leftPadding="2" rightPadding="2">
+									<topPen lineWidth="0.25"/>
+									<leftPen lineWidth="0.25"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Name]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="Table 1_TD" height="14">
+							<textField>
+								<reportElement x="0" y="0" width="110" height="14" uuid="dbf0e8ca-ffa2-410e-b75a-7f9c64ec579a"/>
+								<box leftPadding="2" rightPadding="2">
+									<topPen lineWidth="0.25"/>
+									<leftPen lineWidth="0.25"/>
+									<bottomPen lineWidth="0.25"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{tx_customer_name}  ==  null || $F{tx_customer_name}.equalsIgnoreCase("?") ? "" : $F{tx_customer_name}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="80" uuid="cc094b1b-b159-471c-ba1b-67cd09874f91">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column3"/>
+						<jr:tableHeader style="Table 1_TH" height="15" rowSpan="1">
+							<staticText>
+								<reportElement mode="Opaque" x="0" y="0" width="80" height="15" backcolor="#FCAB53" uuid="abc1522e-5ff4-4176-9699-9788f0ed6a6d"/>
+								<box leftPadding="2" rightPadding="2">
+									<topPen lineWidth="0.25"/>
+									<leftPen lineWidth="0.25"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8" isBold="true"/>
+								</textElement>
+								<text><![CDATA[BP ID/ CBBL Staff ID]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="Table 1_TD" height="14">
+							<textField>
+								<reportElement x="0" y="0" width="80" height="14" uuid="0dc12e76-bd20-4ba4-8586-c248b7e93979"/>
+								<box leftPadding="2" rightPadding="2">
+									<topPen lineWidth="0.25"/>
+									<leftPen lineWidth="0.25"/>
+									<bottomPen lineWidth="0.25"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{tx_bp_no} ==null || $F{tx_bp_no}.equalsIgnoreCase("?") ? "" : $F{tx_bp_no}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="80" uuid="6973d41f-5c2c-46ae-aa14-a5c1cc5c6627">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column4"/>
+						<jr:tableHeader style="Table 1_TH" height="15" rowSpan="1">
+							<staticText>
+								<reportElement mode="Opaque" x="0" y="0" width="80" height="15" backcolor="#FCAB53" uuid="08f86d9d-e586-42c4-80db-6c33a139f84f"/>
+								<box leftPadding="2" rightPadding="2">
+									<topPen lineWidth="0.25"/>
+									<leftPen lineWidth="0.25"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Designation]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="Table 1_TD" height="14">
+							<textField>
+								<reportElement x="0" y="0" width="80" height="14" uuid="203e28a8-a268-47a5-ac3a-21156f251414"/>
+								<box leftPadding="2" rightPadding="2">
+									<topPen lineWidth="0.25"/>
+									<leftPen lineWidth="0.25"/>
+									<bottomPen lineWidth="0.25"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{tx_designation}  ==  null || $F{tx_designation}.equalsIgnoreCase("?") ? "" : $F{tx_designation}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="70" uuid="858fbfe0-8557-4ffa-94e4-064ffb45348a">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column5"/>
+						<jr:tableHeader style="Table 1_TH" height="15" rowSpan="1">
+							<staticText>
+								<reportElement mode="Opaque" x="0" y="0" width="70" height="15" backcolor="#FCAB53" uuid="f8da70a0-6052-4a6d-a6ea-d1122fb60ebc"/>
+								<box leftPadding="2" rightPadding="2">
+									<topPen lineWidth="0.25"/>
+									<leftPen lineWidth="0.25"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Limit]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="Table 1_TD" height="14">
+							<textField>
+								<reportElement x="0" y="0" width="70" height="14" uuid="df63c16a-15c3-41a2-b51e-668250ebd22e"/>
+								<box leftPadding="2" rightPadding="2">
+									<topPen lineWidth="0.25"/>
+									<leftPen lineWidth="0.25"/>
+									<bottomPen lineWidth="0.25"/>
+								</box>
+								<textElement textAlignment="Right" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{dec_approved_limit} == null || Double.compare($F{dec_approved_limit} , new Double(-2147483648)) == 0 ? "" : new DecimalFormat("#,###").format($F{dec_approved_limit})]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="60" uuid="d8129a1d-fa51-4bb5-a742-b7d9d7e98962">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column6"/>
+						<jr:tableHeader style="Table 1_TH" height="15" rowSpan="1">
+							<staticText>
+								<reportElement mode="Opaque" x="0" y="0" width="60" height="15" backcolor="#FCAB53" uuid="f528e57e-784b-4d2c-b3eb-7016aec65fc5"/>
+								<box leftPadding="2" rightPadding="2">
+									<topPen lineWidth="0.25"/>
+									<leftPen lineWidth="0.25"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8" isBold="true"/>
+								</textElement>
+								<text><![CDATA[3% of CC Limit]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="Table 1_TD" height="14">
+							<textField>
+								<reportElement x="0" y="0" width="60" height="14" uuid="f1a49aa9-17f4-4d80-9e99-1dc1a7b9ecd5"/>
+								<box leftPadding="2" rightPadding="2">
+									<topPen lineWidth="0.25"/>
+									<leftPen lineWidth="0.25"/>
+									<bottomPen lineWidth="0.25"/>
+								</box>
+								<textElement textAlignment="Right" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{dec_3_percent_of_approve_limit} == null || Double.compare($F{dec_3_percent_of_approve_limit} , new Double(-2147483648)) == 0 ? "" : new DecimalFormat("#,###").format($F{dec_3_percent_of_approve_limit})]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="50" uuid="577e5295-7a1f-4dad-a5ef-2f200850709e">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column7"/>
+						<jr:tableHeader style="Table 1_TH" height="15" rowSpan="1">
+							<staticText>
+								<reportElement mode="Opaque" x="0" y="0" width="50" height="15" backcolor="#FCAB53" uuid="6cc8a47f-2dc2-4364-8ca4-3292d79961bc"/>
+								<box leftPadding="2" rightPadding="2">
+									<topPen lineWidth="0.25"/>
+									<leftPen lineWidth="0.25"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Salary Credited in]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="Table 1_TD" height="14">
+							<textField>
+								<reportElement x="0" y="0" width="50" height="14" uuid="15c2007d-0f6b-4224-a684-97ec36923676"/>
+								<box leftPadding="2" rightPadding="2">
+									<topPen lineWidth="0.25"/>
+									<leftPen lineWidth="0.25"/>
+									<bottomPen lineWidth="0.25"/>
+								</box>
+								<textElement textAlignment="Right" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{dec_salary_deposited_last_month} == null || Double.compare($F{dec_salary_deposited_last_month} , new Double(-2147483648)) == 0 ? "" : new DecimalFormat("#,###").format($F{dec_salary_deposited_last_month})]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="60" uuid="df8dac13-c8c0-4031-9966-efef78143ad0">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column8"/>
+						<jr:tableHeader style="Table 1_TH" height="15" rowSpan="1">
+							<staticText>
+								<reportElement mode="Opaque" x="0" y="0" width="60" height="15" backcolor="#FCAB53" uuid="448b502e-7e92-46c7-87aa-b7af49f73baf"/>
+								<box leftPadding="2" rightPadding="2">
+									<topPen lineWidth="0.25"/>
+									<leftPen lineWidth="0.25"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8" isBold="true"/>
+								</textElement>
+								<text><![CDATA[CBBL EMI(s)]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="Table 1_TD" height="14">
+							<textField>
+								<reportElement x="0" y="0" width="60" height="14" uuid="07a3fd97-aa54-4bb9-bc8c-c638c2119bf3"/>
+								<box leftPadding="2" rightPadding="2">
+									<topPen lineWidth="0.25"/>
+									<leftPen lineWidth="0.25"/>
+									<bottomPen lineWidth="0.25"/>
+								</box>
+								<textElement textAlignment="Right" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{dec_cbbl_emi} == null || Double.compare($F{dec_cbbl_emi} , new Double(-2147483648)) == 0 ? "" : new DecimalFormat("#,###").format($F{dec_cbbl_emi})]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="60" uuid="d50479bb-0f88-43b3-ab16-d986d4a7e189">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column9"/>
+						<jr:tableHeader style="Table 1_TH" height="15" rowSpan="1">
+							<staticText>
+								<reportElement mode="Opaque" x="0" y="0" width="60" height="15" backcolor="#FCAB53" uuid="37981219-40bc-43f0-b8cd-4dd5df4732ae"/>
+								<box leftPadding="2" rightPadding="2">
+									<topPen lineWidth="0.25"/>
+									<leftPen lineWidth="0.25"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Remaining after EMIs]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="Table 1_TD" height="14">
+							<textField>
+								<reportElement x="0" y="0" width="60" height="14" uuid="05eb5179-98bb-450a-a3e9-e68aeb4dc506"/>
+								<box leftPadding="2" rightPadding="2">
+									<topPen lineWidth="0.25"/>
+									<leftPen lineWidth="0.25"/>
+									<bottomPen lineWidth="0.25"/>
+								</box>
+								<textElement textAlignment="Right" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{dec_remaining_emi} == null || Double.compare($F{dec_remaining_emi} , new Double(-2147483648)) == 0 ? "" : new DecimalFormat("#,###").format($F{dec_remaining_emi})]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="60" uuid="0baa1fa6-89bb-4e93-aa4a-172556efa2ad">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column10"/>
+						<jr:tableHeader style="Table 1_TH" height="15" rowSpan="1">
+							<staticText>
+								<reportElement mode="Opaque" x="0" y="0" width="60" height="15" backcolor="#FCAB53" uuid="6cfe6e2d-bd9c-4801-9daa-758a8062c275"/>
+								<box leftPadding="2" rightPadding="2">
+									<topPen lineWidth="0.25"/>
+									<leftPen lineWidth="0.25"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8" isBold="true"/>
+								</textElement>
+								<text><![CDATA[CIB DATE]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="Table 1_TD" height="14">
+							<textField>
+								<reportElement x="0" y="0" width="60" height="14" uuid="c8f8b762-7419-4c2b-821d-b6c4a9f4b53c"/>
+								<box leftPadding="2" rightPadding="2">
+									<topPen lineWidth="0.25"/>
+									<leftPen lineWidth="0.25"/>
+									<bottomPen lineWidth="0.25"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{dt_cib_generation} == null || new SimpleDateFormat("MM-dd-yyyy").format($F{dt_cib_generation} ).equalsIgnoreCase("01-01-1970")  ? "" : new SimpleDateFormat("yyyy/MM/dd").format($F{dt_cib_generation} )]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="50" uuid="39b22d43-540d-4434-9c8f-ad3abfe4dde2">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column11"/>
+						<jr:tableHeader style="Table 1_TH" height="15" rowSpan="1">
+							<staticText>
+								<reportElement mode="Opaque" x="0" y="0" width="50" height="15" backcolor="#FCAB53" uuid="687c8655-5ece-44c5-9839-0dc06a53fdb4"/>
+								<box leftPadding="2" rightPadding="2">
+									<topPen lineWidth="0.25"/>
+									<leftPen lineWidth="0.25"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8" isBold="true"/>
+								</textElement>
+								<text><![CDATA[CIB Status]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="Table 1_TD" height="14">
+							<textField>
+								<reportElement x="0" y="0" width="50" height="14" uuid="8d5691a2-5ab3-448f-a8f6-7c4b0ce56c82"/>
+								<box leftPadding="2" rightPadding="2">
+									<topPen lineWidth="0.25"/>
+									<leftPen lineWidth="0.25"/>
+									<bottomPen lineWidth="0.25"/>
+									<rightPen lineWidth="1.0"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{tx_cib_status}  ==  null || $F{tx_cib_status}.equalsIgnoreCase("?") ? "" : $F{tx_cib_status}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="50" uuid="f5f575da-d15f-4c0e-837e-168e49fc8414">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column12"/>
+						<jr:tableHeader height="15" rowSpan="1">
+							<staticText>
+								<reportElement mode="Opaque" x="0" y="0" width="50" height="15" backcolor="#FCAB53" uuid="1300cd32-5afc-4c8c-885c-ee7711f61e01"/>
+								<box leftPadding="2" rightPadding="2">
+									<topPen lineWidth="0.25"/>
+									<leftPen lineWidth="0.25"/>
+									<rightPen lineWidth="0.25"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Card Type]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell height="14">
+							<textField>
+								<reportElement x="0" y="0" width="50" height="14" uuid="5c428012-5d77-4ac5-8368-d18837b74115"/>
+								<box leftPadding="2" rightPadding="2">
+									<topPen lineWidth="0.25"/>
+									<leftPen lineWidth="0.25"/>
+									<bottomPen lineWidth="0.25"/>
+									<rightPen lineWidth="0.25"/>
+								</box>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{tx_card_type}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="39" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="21" width="799" height="16" uuid="225dc29e-000e-4f78-a4b1-f322a4b69420">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box topPadding="2" bottomPadding="2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page " + $V{PAGE_NUMBER} + " of " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="471" splitType="Stretch">
+			<staticText>
+				<reportElement x="20" y="44" width="760" height="18" uuid="a875ed3e-4088-465f-ab0e-4d7fbeea41b3">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Considering the above, recommended for your kind approval.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="130" width="160" height="15" isPrintWhenDetailOverflows="true" uuid="fc96c873-3f83-46ef-be5d-6a0ce42c301f">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[-----------------------------------------------------]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="40" y="163" width="160" height="18" isPrintWhenDetailOverflows="true" uuid="618d3e47-4cc7-4dca-be5e-a2c2603a6e29">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{p_prepared_by_designation} ==null || $P{p_prepared_by_designation}.equalsIgnoreCase("?") ? "" : $P{p_prepared_by_designation}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="40" y="145" width="160" height="18" isPrintWhenDetailOverflows="true" uuid="deff497a-d275-44f8-ab81-f036350af374">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{p_prepared_by_name} ==null || $P{p_prepared_by_name}.equalsIgnoreCase("?") ? "" : $P{p_prepared_by_name}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="40" y="17" width="740" height="18" uuid="3c824aa1-c5a8-4c04-8a6d-1ba567af5021">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Duplication checking must be ensured by Card Operation before card production.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="80" width="160" height="16" isPrintWhenDetailOverflows="true" uuid="b2b679a1-e943-4745-a26b-7acb1a11cb18">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Prepared By]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="610" y="130" width="160" height="15" isPrintWhenDetailOverflows="true" uuid="e5f7cccf-bad6-4af4-a786-7da2b37d732b">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[-----------------------------------------------------]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="610" y="80" width="160" height="16" isPrintWhenDetailOverflows="true" uuid="344e2462-ff6b-4fd5-8c88-b97312d5d151">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Recommended By]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="230" y="130" width="160" height="15" isPrintWhenDetailOverflows="true" uuid="5a1f1e64-8bd4-4c98-8d3f-f9e9f913b3eb">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[-----------------------------------------------------]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="230" y="163" width="160" height="18" isPrintWhenDetailOverflows="true" uuid="24aeee4c-4caf-4f97-ab6b-e1ef97bd0dc3">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{p_recommended_1_by_designation} ==null || $P{p_recommended_1_by_designation}.equalsIgnoreCase("?") ? "" : $P{p_recommended_1_by_designation}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="230" y="145" width="160" height="18" isPrintWhenDetailOverflows="true" uuid="9b43d1f2-22ab-4881-841f-86de9ff43934">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{p_recommended_1_by_name} ==null || $P{p_recommended_1_by_name}.equalsIgnoreCase("?") ? "" : $P{p_recommended_1_by_name}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="230" y="80" width="160" height="16" isPrintWhenDetailOverflows="true" uuid="8481a740-498d-4c85-812d-26ca21dcf26e">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Recommended By]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="420" y="130" width="160" height="15" isPrintWhenDetailOverflows="true" uuid="c5943a80-20ae-4146-bd94-76ef99a5de2f">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[-----------------------------------------------------]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="420" y="80" width="160" height="16" isPrintWhenDetailOverflows="true" uuid="76a674ff-8722-456d-ac8a-6e50c455a194">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Recommended By]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="135" y="276" width="160" height="15" isPrintWhenDetailOverflows="true" uuid="e3d4e83b-016b-49ec-bb65-972df97bdfa3">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[-----------------------------------------------------]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="135" y="216" width="160" height="16" isPrintWhenDetailOverflows="true" uuid="e6deb394-590c-4bcf-8513-4c6aa3dbd872">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Recommended By]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="325" y="276" width="160" height="15" isPrintWhenDetailOverflows="true" uuid="8209e192-0e0b-45c2-9c8e-a7d15ccc7693">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[-----------------------------------------------------]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="325" y="216" width="160" height="16" isPrintWhenDetailOverflows="true" uuid="68098562-5956-4a4e-a3f1-8006f9b90667">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Recommended By]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="515" y="276" width="160" height="15" isPrintWhenDetailOverflows="true" uuid="84e6fa0b-853a-4a88-bc39-1002cfbbc908">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[-----------------------------------------------------]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="515" y="216" width="160" height="16" isPrintWhenDetailOverflows="true" uuid="40117136-3d14-4206-bf57-9dacd503329d">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Recommended By]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="325" y="420" width="160" height="15" isPrintWhenDetailOverflows="true" uuid="cfaab31b-f83c-4ddb-9c90-2b842dbb3b81">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[-----------------------------------------------------]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="325" y="453" width="160" height="18" isPrintWhenDetailOverflows="true" uuid="b4ed146f-d0a8-43c9-9ad3-e8600e042d76">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{p_approved_by_designation} ==null || $P{p_approved_by_designation}.equalsIgnoreCase("?") ? "" : $P{p_approved_by_designation}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="325" y="435" width="160" height="18" isPrintWhenDetailOverflows="true" uuid="db7ee720-fb2e-41f3-b61f-9c4fc8760a31">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{p_approved_by_name} ==null || $P{p_approved_by_name}.equalsIgnoreCase("?") ? "" : $P{p_approved_by_name}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="325" y="360" width="160" height="16" isPrintWhenDetailOverflows="true" uuid="e42aa8df-10ef-4bae-816e-8263edee8df2">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Approved By]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="420" y="163" width="160" height="18" isPrintWhenDetailOverflows="true" uuid="4229cd90-9ede-4811-9191-eda9f73404d8">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{p_recommended_2_by_designation} ==null || $P{p_recommended_2_by_designation}.equalsIgnoreCase("?") ? "" : $P{p_recommended_2_by_designation}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="420" y="145" width="160" height="18" isPrintWhenDetailOverflows="true" uuid="4bb3df4b-fbe9-4678-b913-3e1fa923c1d6">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{p_recommended_2_by_name} ==null || $P{p_recommended_2_by_name}.equalsIgnoreCase("?") ? "" : $P{p_recommended_2_by_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="610" y="163" width="160" height="18" isPrintWhenDetailOverflows="true" uuid="eb7cf126-37e2-424a-aeee-b2028ac34994">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{p_recommended_3_by_designation} ==null || $P{p_recommended_3_by_designation}.equalsIgnoreCase("?") ? "" : $P{p_recommended_3_by_designation}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="610" y="145" width="160" height="18" isPrintWhenDetailOverflows="true" uuid="26a403b9-bef7-436c-97da-b94e18125f06">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{p_recommended_3_by_name} ==null || $P{p_recommended_3_by_name}.equalsIgnoreCase("?") ? "" : $P{p_recommended_3_by_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="515" y="309" width="160" height="18" isPrintWhenDetailOverflows="true" uuid="d5feb0d5-d08a-425e-954a-fbc1bee6ee8b">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{p_recommended_6_by_designation} ==null || $P{p_recommended_6_by_designation}.equalsIgnoreCase("?") ? "" : $P{p_recommended_6_by_designation}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="515" y="291" width="160" height="18" isPrintWhenDetailOverflows="true" uuid="1cdb982e-b4f1-4b68-a86a-7063830b16c9">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{p_recommended_6_by_name} ==null || $P{p_recommended_6_by_name}.equalsIgnoreCase("?") ? "" : $P{p_recommended_6_by_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="325" y="309" width="160" height="18" isPrintWhenDetailOverflows="true" uuid="016258c7-c707-4aaa-a88c-0564184a165d">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{p_recommended_5_by_designation} ==null || $P{p_recommended_5_by_designation}.equalsIgnoreCase("?") ? "" : $P{p_recommended_5_by_designation}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="325" y="291" width="160" height="18" isPrintWhenDetailOverflows="true" uuid="a00037a5-737e-4fa0-81ec-80b01f8a1f6f">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{p_recommended_5_by_name} ==null || $P{p_recommended_5_by_name}.equalsIgnoreCase("?") ? "" : $P{p_recommended_5_by_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="135" y="309" width="160" height="18" isPrintWhenDetailOverflows="true" uuid="5f7caddd-0911-4c5a-96c6-bc9869a9b9b2">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{p_recommended_4_by_designation} ==null || $P{p_recommended_4_by_designation}.equalsIgnoreCase("?") ? "" : $P{p_recommended_4_by_designation}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="135" y="291" width="160" height="18" isPrintWhenDetailOverflows="true" uuid="731781d6-e092-4ef1-aad5-3c77d92aa638">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{p_recommended_4_by_name} ==null || $P{p_recommended_4_by_name}.equalsIgnoreCase("?") ? "" : $P{p_recommended_4_by_name}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>

@@ -1,0 +1,11 @@
+#include <nSMART_SQL.h>
+
+#define _TR_NAME			{INS_TR_acquisition_applicant_details};
+#define _TABLE_NAME			{T_ACQUISITION_APPLICANT_DETAILS};
+#define _TABLE_NAME_AUDIT	{T_ACQUISITION_APPLICANT_DETAILS_AUDIT};
+#define _PRIMARY_KEY		{id_acquisition_applicant_key};
+#define _VERSION			{id_acquisition_applicant_ver};
+
+_DROP_TRIGGER
+
+_CREATE_TRIGGER (_TR_NAME)

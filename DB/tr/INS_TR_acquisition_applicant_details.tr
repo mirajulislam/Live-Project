@@ -1,0 +1,89 @@
+ 	
+
+EXEC DROP_db_object @tx_db_object_type = 'TR', @tx_db_object_name = 'INS_TR_acquisition_applicant_details'
+	go
+
+IF ('CREATE' = 'CREATE')
+		PRINT '**** WARNING : CREATING Trigger ****'
+	ELSE IF ('CREATE' = 'ALTER')
+		PRINT '**** WARNING : ALTER Trigger ****'
+	ELSE
+		PRINT '**** WARNING : UNKNOWN Trigger ACTION ****'
+	go
+
+	CREATE TRIGGER INS_TR_acquisition_applicant_details
+	ON T_ACQUISITION_APPLICANT_DETAILS
+	FOR INSERT, UPDATE
+	AS
+	BEGIN
+		
+	
+		DECLARE @g_id_env_key			int
+		DECLARE @g_tx_env_name			varchar(256)
+	
+		DECLARE @g_ct_row				int
+		DECLARE @g_id_return_status		int
+	
+		DECLARE @g_id_error_key			int
+		DECLARE @g_tx_err_msg			varchar(1024)
+		DECLARE @g_tx_err_msg_tmp		varchar(1024)
+	
+		IF (	UPDATE(id_acquisition_applicant_ver)
+				AND EXISTS	(	SELECT	*
+								FROM	INSERTED I,	DELETED D
+								WHERE	I.id_acquisition_applicant_key = D.id_acquisition_applicant_key
+								AND		I.id_acquisition_applicant_ver <= D.id_acquisition_applicant_ver
+							)
+			)
+		BEGIN
+			SELECT @g_tx_err_msg = 'Invalid version data out of synch for INS_TR_acquisition_applicant_details'
+			RAISERROR ('@g_tx_err_msg', 16, 1) WITH SETERROR
+			RETURN
+		END
+	
+		IF (NOT EXISTS (SELECT * FROM DELETED))
+		BEGIN
+			-- INITIAL VERSION
+	
+			INSERT	T_ACQUISITION_APPLICANT_DETAILS_AUDIT
+			SELECT	*
+			FROM	INSERTED
+	
+			SELECT @g_ct_row = @@rowcount, @g_id_error_key = @@error
+			SELECT @g_tx_err_msg = 'Error inserting initial version into _audit_table_'
+			IF (@g_id_error_key != 0 )
+			BEGIN
+				RAISERROR ('@g_tx_err_msg', 16, 1) WITH SETERROR
+				RETURN
+			END
+		END
+		ELSE IF (	UPDATE(id_acquisition_applicant_ver)
+					AND EXISTS	(	SELECT *
+									FROM	INSERTED I, DELETED D
+									WHERE	I.id_acquisition_applicant_key = D.id_acquisition_applicant_key
+									AND		I.id_acquisition_applicant_ver != D.id_acquisition_applicant_ver
+								)
+				)
+		BEGIN
+	
+			INSERT	T_ACQUISITION_APPLICANT_DETAILS_AUDIT
+			SELECT	*
+			FROM	INSERTED I
+			WHERE	EXISTS(	SELECT	*
+							FROM	DELETED d
+							WHERE	I.id_acquisition_applicant_key = D.id_acquisition_applicant_key
+							AND		I.id_acquisition_applicant_ver != D.id_acquisition_applicant_ver
+						  )
+	
+			SELECT @g_ct_row = @@rowcount, @g_id_error_key = @@error
+			SELECT @g_tx_err_msg = 'Error inserting into _audit_table_'
+			IF (@g_id_error_key != 0 )
+			BEGIN
+				RAISERROR ('@g_tx_err_msg', 16, 1) WITH SETERROR
+				RETURN
+			END
+		END
+	
+		
+	END
+	go

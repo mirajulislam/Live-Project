@@ -1,0 +1,7 @@
+create branch and app.properties app.user.legalEntityTypeId=(110046) change this value
+
+Admin panel set url : 
+Group : CBS 
+Sub Group : URL
+Name : FINACLE_CUSTOMER_INFO_URL_PHONE
+value1 :  http://10.71.14.26/PHONE_NUMBER/

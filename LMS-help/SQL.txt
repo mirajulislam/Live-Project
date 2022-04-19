@@ -1,0 +1,68 @@
+password select 
+
+SELECT id_user_key, tx_login_name, CONVERT(varchar, DECRYPTBYPASSPHRASE(CONVERT(varchar, id_user_key), tx_password)) as password
+FROM T_USER  WHERE tx_login_name='MIS'
+
+UPDATE password
+
+update t_user
+set tx_password = EncryptByPassPhrase(CONVERT(varchar, id_user_key), tx_login_name )
+, is_allow_login = 1
+, is_first_login = 0
+where id_user_key = 111019
+
+SELECT loan details
+
+SELECT
+A.tx_loan_tracking_id
+, ca.tx_bp_no
+, A.tx_application_no
+, A.dec_applied_loan_amount
+, a.dec_recommended_for_approval
+, A.dtt_mod
+, A.id_legal_entity_key
+, A.id_creator_key
+, A.dtt_create
+, U.tx_login_name
+, st.tx_state_name
+, cl.tx_value1
+, cc.tx_value1
+, ca.dtt_date_of_birth
+, ca.tx_age
+, ca.dtt_joining_date
+, ca.tx_service_length
+FROM T_LOAN A
+join T_CONFIGURATION cl on cl.id_configuration_key = a.id_loan_type_key
+join T_CONFIGURATION cc on cc.id_configuration_key = a.id_customer_type_key
+JOIN T_USER U ON A.id_user_mod_key=U.id_user_key
+Join T_CUSTOMER ca on A.id_customer_key=ca.id_customer_key
+JOIN T_FSM_STATE ST ON ST.id_fsm_state_key=A.id_state_key WHERE A.tx_data_source='FILE'
+AND A.dtt_create='2020-02-24'
+
+
+select tx_loan_tracking_id, tx_data_source,tx_account_no,dtt_create from T_LOAN where tx_account_no =('-2147483648')
+order by dtt_create desc
+
+select distinct
+CUSTOMER_NAME = tx_customer_name
+, BP_NO = tx_bp_no
+, SO_NAME = tx_login_name
+, POSTING_PLACE  = CASE WHEN tx_current_posting_place = '?' THEN 'NOT FOUND' ELSE tx_current_posting_place END
+, DISBURSED_AMT = L.dec_applied_loan_amount
+from T_LOAN L
+JOIN T_CUSTOMER C ON C.id_customer_key  = L.id_customer_key
+JOIN T_USER U ON U.id_user_key =  L.id_creator_key
+where C.tx_bp_no IN 
+
+
+UPDATE L
+		SET L.tx_account_no = C.tx_account_no
+		FROM T_LOAN L
+		JOIN T_CUSTOMER C ON C.id_customer_key = L.id_customer_key
+		where L.tx_account_no = '-2147483648'
+
+		UPDATE L
+		SET  L.tx_account_no = C.tx_account_no
+		FROM T_LOAN_AUDIT L
+		JOIN T_CUSTOMER C ON C.id_customer_key = L.id_customer_key
+		where L.tx_account_no = '-2147483648'

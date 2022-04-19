@@ -1,0 +1,127 @@
+ACT_credit_card @tx_action_name = 'REMOVE_CARD_FROM_CARD_GROUP' -- OUTPUT
+, @is_active = null
+, @id_env_key = null -- OUTPUT
+, @id_user_mod_key = 111148 -- OUTPUT
+, @id_credit_card_key = 100015 -- OUTPUT
+, @tx_card_group_id = '2109160013'
+, @dtt_group_create = null
+, @tx_json_log_msg = null -- OUTPUT
+
+
+ACT_credit_card @tx_action_name = 'SELECT_ALL_CARD_GROUP_DATA' -- OUTPUT
+, @is_active = null
+, @id_env_key = null -- OUTPUT
+, @id_user_mod_key = 111148 -- OUTPUT
+, @tx_from_date = '2021-09-12'
+, @tx_to_date = '2021-09-19'
+, @tx_json_log_msg = null -- OUTPUT
+
+
+ACT_configuration @tx_action_name = 'NEW' -- OUTPUT
+, @is_active = null
+, @id_env_key = null -- OUTPUT
+, @id_user_mod_key = 110938 -- OUTPUT
+, @id_configuration_ver = 0 -- OUTPUT
+, @tx_group = 'CREDIT_CARD'
+, @tx_sub_group = 'CREDIT_CARD_TYPE'
+, @tx_name = null
+, @tx_value1 = 'VISA CLASSIC'
+, @tx_value2 = '10'
+, @tx_value3 = 'VC'
+
+ACT_card_config @tx_action_name = 'SELECT_CARD_PERCENT' -- OUTPUT
+, @is_active = null
+, @id_env_key = null -- OUTPUT
+, @id_user_mod_key = 111287 -- OUTPUT
+, @dtt_mod = null -- OUTPUT
+, @id_state_key = null -- OUTPUT
+, @tx_state_name = null -- OUTPUT
+, @id_action_key = null -- OUTPUT
+, @id_event_key = null -- OUTPUT
+, @id_event_map1_key = null -- OUTPUT
+, @id_event_map2_key = null -- OUTPUT
+, @id_event_map3_key = null -- OUTPUT
+, @id_event_map4_key = null -- OUTPUT
+, @id_card_config_key = null -- OUTPUT
+, @id_card_config_ver = null -- OUTPUT
+, @id_card_type_key = 101397 -- OUTPUT
+, @id_customer_type_key = 100080 -- OUTPUT
+, @dec_interest_rate = null -- OUTPUT
+, @tx_json_log_msg = null -- OUTPUT
+
+
+
+ACT_customer @tx_action_name = 'CUSTOMER_SEARCH_WITH_SEND_OTP' -- OUTPUT
+, @is_active = null
+, @id_env_key = null -- OUTPUT
+, @id_user_mod_key = 111287 -- OUTPUT
+, @dtt_mod = null -- OUTPUT
+, @id_state_key = null -- OUTPUT
+, @tx_state_name = null -- OUTPUT
+, @id_action_key = null -- OUTPUT
+, @id_event_key = null -- OUTPUT
+, @id_event_map1_key = null -- OUTPUT
+, @id_event_map2_key = null -- OUTPUT
+, @id_event_map3_key = null -- OUTPUT
+, @id_event_map4_key = null -- OUTPUT
+, @id_customer_key = null -- OUTPUT
+, @id_customer_ver = null -- OUTPUT
+, @tx_customer_id = null
+, @tx_bp_no = 'BP9616184799'
+, @tx_customer_name = null
+, @tx_designation = null
+, @tx_current_posting_place = null
+, @dtt_date_of_birth = null
+, @tx_age = null
+, @dtt_joining_date = null
+, @tx_service_length = null
+, @dtt_retirement_date = null
+, @tx_remaining_year_of_retirement = null
+, @tx_nid = null
+, @tx_tin = null
+, @tx_account_no = null
+, @int_salary_disbursed_with_cbbl = null
+, @tx_marital_status = null
+, @tx_cif = null
+, @tx_mother_name = null
+, @tx_father_name = null
+, @tx_spouse = null
+, @tx_house_ownership = null
+, @tx_permanet_addr = null
+, @tx_office_addr = null
+, @tx_mobile = null
+, @tx_emer_phone = null
+, @tx_is_matched_nid = null
+, @tx_customer_type = null
+, @id_customer_type_key = null
+, @tx_name_in_bangla = null
+, @tx_alternative_mobile = null
+, @tx_office_id = null
+, @tx_district = null
+, @tx_division = null
+, @tx_unit_1 = null
+, @tx_unit_2 = null
+, @tx_search_Date_Of_Birth = null
+, @dt_last_date_of_posting = null
+, @tx_district_of_posting = null
+, @tx_name_as_per_nid = null
+, @tx_customer_posting_district = null
+, @tx_customer_posting_division = null
+, @tx_passport_no = null
+, @tx_highest_level_of_education = null
+, @dt_passpord_expiry_date = null
+, @tx_email = null
+, @tx_card_monthly_bill_debited = null
+, @tx_json_log_msg = null -- OUTPUT
+
+
+
+ACT_customer @tx_action_name = 'CUSTOMER_SEARCH_WITH_SEND_OTP' -- OUTPUT
+, @is_active = null
+, @id_env_key = null -- OUTPUT
+, @id_user_mod_key = 111287 -- OUTPUT
+, @tx_mobile = '01712833722'
+
+
+
+

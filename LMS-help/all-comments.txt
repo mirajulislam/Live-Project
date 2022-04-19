@@ -1,0 +1,33 @@
+folder change: 			cd /home/local/group/naztech/app/Tomcat/
+folder to folder move :		/home/local/group/naztech/app/Tomcat$ sudo mv LMS.7z /home/local/group/naztech/app/Tomcat/LMS/webapps/
+rename folder/file command: 	sudo mv LMS LMSX
+
+ zip folder/file command: 	zip -r Lms_server.zip Lms-server/
+
+Move folder/file command : 	mv Lms_server.zip /home/naztech/
+
+log view command : 		tail -f /home/Logs/LMS/lms-server.log
+
+permision command:		sudo chmod -R 755 /home/Logs/
+permision command: 		sudo chmod -R 775 /home/Logs/
+View folder/file command : 	ls -lth
+
+				/home/local/group/naztech/app/Tomcat/LMS/webapps/
+
+danger command:::
+remove 	:			sudo rm -rf Str.class
+ 				sudo rm -rf LoanService.class
+
+tomate stop: 			sudo systemctl stop tomcat.service
+tomate start: 			sudo systemctl start tomcat.service
+
+cd /home/local/group/naztech/app/Tomcat/8.5.56/webapps/Lms-server/WEB-INF/classes/com/naztech/lms/constants/
+sudo mv Str.class StrX.class
+
+sudo mv constants /home/local/group/naztech/app/Tomcat/8.5.56/webapps/Lms-server/WEB-INF/classes/com/naztech/lms/constants/
+
+cd 
+
+IP check :::             	wget -p http://site.com
+
+

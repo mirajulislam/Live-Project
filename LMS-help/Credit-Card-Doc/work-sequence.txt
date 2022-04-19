@@ -1,0 +1,27 @@
+1. All type off user and role should be in DB. Like, card officer, field originator.
+2. All state transaction should be defined in DB as type marked “CREDIT_CARD”.
+
+4. Card type will be configured in DB.
+5. Interest rate will be configurable depending on customer type and card type(Admin panel).
+6. Document list will be configurable  depending on customer type and card type(Admin panel).
+
+7.  
+i. service class, model class, sp, table, tr for T_CREDIT_CARD table
+ii. add column and update service class, model class, sp, table, tr for T_CUSTOMER table
+iii. add column and update service class, model class, sp, table, tr for T_EXISTING_LIABILITY table
+iv.  service class, model class, sp, table, tr for T_DOCUMENT table
+v.   service class, model class, sp, table, tr for T_CARD_CONFIG table
+vi.  service class, model class, sp, table, tr for T_CARD_DOC_MAP table
+
+8. Credit card main panel UI
+9. Create new credit card application this will be a extjs form we need to submit with document.
+10. Credit card application update, we will be showing document list as grid like LMS.
+11. All data save update properly
+12. On credit card details page showing fields and action button properly according to role
+13. State transction going smothly.
+14. groping and removing from group
+15. doing query
+16. search panel
+17. status tree
+18. report generate
+19. work history

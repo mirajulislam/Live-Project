@@ -1,0 +1,23 @@
+VPN:
+
+id: vpn.support2.naz
+PW: info@1234!
+103.141.204.2
+
+Remote 1: 
+
+CBBL Remote Console
+IP Address: 10.110.1.177
+Login : naztech.dev1/naztech.dev2/naztech.dev3
+Password : nazdaqTechnologies123
+
+Remote 2: 
+
+CBBL Remote Console:
+IP Address: 10.110.1.111
+Login : naztech.dev2
+Password : naztech.dev2123
+
+user name: 10.71.90.111
+password: naztech
+

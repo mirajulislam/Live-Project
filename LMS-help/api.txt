@@ -1,0 +1,52 @@
+I-Office-api: GET
+
+http://10.71.90.135:80/IOFFFICE-API/?BP=BP9617197461
+
+Finacol api: POST
+
+http://10.71.14.26/RETCUSTINQ/
+
+body :
+
+<?xml version="1.0" encoding="UTF-8"?>
+<FIXML xsi:schemaLocation="http://www.finacle.com/fixml RetCustInq.xsd" xmlns="http://www.finacle.com/fixml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Header>
+<RequestHeader>
+<MessageKey>
+<RequestUUID>XXXXXXXXXXXXXXXXX</RequestUUID>
+<ServiceRequestId>RetCustInq</ServiceRequestId>
+<ServiceRequestVersion>10.2</ServiceRequestVersion>
+<ChannelId>CRM</ChannelId>
+<LanguageId></LanguageId>
+</MessageKey>
+<RequestMessageInfo>
+<BankId>01</BankId>
+<TimeZone></TimeZone>
+<EntityId></EntityId>
+<EntityType></EntityType>
+<ArmCorrelationId></ArmCorrelationId>
+<MessageDateTime>2019-06-24T17:39:57.622</MessageDateTime>
+</RequestMessageInfo>
+<Security>
+<Token>
+<PasswordToken>
+<UserId>CC_FI_GPLEX</UserId>
+<Password>GLXS_OKTaYHRs@6</Password>
+</PasswordToken>
+</Token>
+<FICertToken></FICertToken>
+<RealUserLoginSessionId></RealUserLoginSessionId>
+<RealUser></RealUser>
+<RealUserPwd></RealUserPwd>
+<SSOTransferToken></SSOTransferToken>
+</Security>
+</RequestHeader>
+</Header>
+<Body>
+<RetCustInqRequest>
+<RetCustInqRq>
+<CustId>0044601</CustId>
+</RetCustInqRq>
+</RetCustInqRequest>
+</Body>
+</FIXML>

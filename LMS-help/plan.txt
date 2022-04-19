@@ -1,0 +1,22 @@
+full package prod folder a nibo,,,
+
+systemctl stop tomcat.service
+systemctl start tomcat.service
+
+web r server backup download korbo....
+
+1.........eloan app folder and store and url
+2.........nid folder crete for store nid . user image
+3.........prod nid api change.
+4.........check table column .. table . script
+5.........head office report problem for page.
+
+
+
+after deploy,,
+
+Excel test 
+report test
+any updated loan update
+memo check
+
